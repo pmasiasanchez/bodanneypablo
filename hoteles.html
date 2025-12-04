@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoteles Recomendados - Boda Anne & Pablo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        header {
+            background: linear-gradient(135deg, #06b6d4 0%, #10b981 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        nav {
+            background: white;
+            padding: 1rem 2rem;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            color: #0891b2;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .intro {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 3rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .hotel-card {
+            background: white;
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .hotel-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+        }
+
+        .hotel-card h2 {
+            color: #0891b2;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        .hotel-card .estrellas {
+            color: #f39c12;
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .hotel-card p {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .hotel-card .destacado {
+            background: #e0f2f1;
+            padding: 1rem;
+            border-radius: 5px;
+            margin: 1rem 0;
+            border-left: 4px solid #0891b2;
+        }
+
+        .hotel-card .btn {
+            display: inline-block;
+            background: #0891b2;
+            color: white;
+            padding: 0.8rem 2rem;
+            border-radius: 50px;
+            text-decoration: none;
+            margin-top: 1rem;
+            transition: all 0.3s;
+        }
+
+        .hotel-card .btn:hover {
+            background: #10b981;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .hotel-card h2 {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🏨 Hoteles Recomendados</h1>
+        <p>Para nuestra boda en Ávila</p>
+    </header>
+
+    <nav>
+        <a href="index.html">← Volver a la Web Principal</a>
+    </nav>
+
+    <div class="container">
+        <div class="intro">
+            <h2>Alojamiento en Ávila</h2>
+            <p>Hemos seleccionado estos cuatro hoteles especiales para que vuestra estancia en Ávila sea inolvidable. Todos están en el centro histórico a pocos pasos del Palacio de los Sofraga.</p>
+        </div>
+
+    
+        <!-- Hotel 1: Sofraga Palacio -->
+        <div class="hotel-card">
+            <h2>🏛️ Palacio de los Sofraga</h2>
+            <div class="estrellas">⭐⭐⭐⭐</div>
+            
+            <div class="destacado">
+                <strong>💒 ¡Aquí celebramos nuestra boda!</strong>
+            </div>
+
+            <p><strong>📍 Ubicación:</strong> Integrado en la Muralla de Ávila - A 4 minutos a pie de la Catedral</p>
+            
+            <p><strong>✨ Características destacadas:</strong></p>
+            <p>Hotel boutique de 4 estrellas con solo 27 habitaciones que forma parte de la histórica muralla medieval de Ávila. Las habitaciones tienen paredes de piedra original de la muralla del siglo XII. Cuenta con jardín centenario con cedros, restaurante gourmet, terraza con vistas espectaculares y aparcamiento privado. Un lugar único donde la historia y el lujo se encuentran.</p>
+            <p><strong>Si decidis reservar aqui lo mejor es que llameis directamente y os hacen un descuento en función de lo que necesiteis , parking, cama supletoria etc</strong></p>
+            <div style="background: #fff9e6; padding: 1.5rem; border-radius: 5px; margin: 1.5rem 0; border-left: 4px solid #f39c12;">
+    <strong style="font-size: 1.2rem; color: #f39c12;">💰 Tarifas Especiales para Nuestra Boda:</strong>
+        <ul style="margin-top: 1rem; line-height: 2;">
+    <li><strong>Habitación Doble Superior de Sabado a domingo </strong> 158€ </li>
+        <li><strong>Habitación Doble Superior de vienes a domingo </strong> 272€ </li>
+        <li><strong>King Premium:</strong> 340€ </li>
+      
+        </ul>
+        </div>
+            
+            <p><strong>🌟 Lo que más gusta:</strong> La experiencia única de dormir con la muralla en tu habitación, el restaurante excepcional, los jardines preciosos y ovbiamente que nos casamos allí y será muy cómodo cualquier cosa que necesites durante el evento.</p>
+
+            <a href="https://www.sofragapalacio.com/" target="_blank" class="btn">Ver Web Oficial</a>
+            <a href="tel:+34920254080" class="btn">📞 Llamar: +34 920 254 080</a>
+        </div>
+
+         <!-- Hotel 4: Palacio de Valderábanos -->
+        <div class="hotel-card">
+            <h2>⚔️ Palacio de Valderábanos</h2>
+            <div class="estrellas">⭐⭐⭐⭐</div>
+            
+
+            <p><strong>📍 Ubicación:</strong> Plaza de la Catedral - A solo 15 metros de la Catedral</p>
+            
+            <p><strong>✨ Características destacadas:</strong></p>
+            <p>Hotel de 4 estrellas ubicado en un palacio medieval del siglo XIV con 80 habitaciones espaciosas. Conserva elementos originales como puertas de madera maciza, armaduras y obras de arte de época. Ofrece bar, biblioteca y salones para eventos.</p>
+
+            <p><strong>🌟 Lo que más gusta:</strong> Su ubicación inmejorable frente a la catedral, el edificio histórico con encanto medieval y las habitaciones amplias.</p>
+            
+       <div class="destacado">
+                <strong>🏰 Elegancia medieval del siglo XIV</strong><br>
+                <strong style="color: #e74c3c; font-size: 1.2rem;">🎉 PROMOCODE: ENLACEPAYANNE - Descuento: 10%</strong><br>
+                <div style="margin-top: 1rem; padding-top: 1rem; border-top: 2px solid #ddd;">
+                    <strong>💰 Tarifas:</strong> Desde 114€ la Habitación Doble Económica Interior hasta 157€ por la Habitación Suite
+                </div>
+            </div>
+            
+            <a href="https://www.hotelpalaciovalderrabanos.com/" target="_blank" class="btn">Ver Web Oficial</a>
+            <a href="tel:+34920211023" class="btn">📞 Llamar: +34 920 211 023</a>
+        </div>
+
+           <!-- Hotel 2: Velada -->
+        <div class="hotel-card">
+            <h2>🏰 Palacio de los Velada</h2>
+            <div class="estrellas">⭐⭐⭐⭐</div>
+            
+            <div class="destacado">
+                <strong>💎 Hotel histórico en palacio del siglo XVI</strong>
+            </div>
+
+            <p><strong>📍 Ubicación:</strong> Plaza de la Catedral, 10 - Justo enfrente de la Catedral de Ávila</p>
+            
+            <p><strong>✨ Características destacadas:</strong></p>
+            <p>Este impresionante hotel de 4 estrellas está ubicado en un palacio del siglo XVI con un hermoso patio central rodeado de arcos. Cuenta con 144 habitaciones elegantes,  bar de estilo inglés, y parking privado. Su ubicación es excepcional, a 500 metros del Convento de Santa Teresa.</p>
+
+            <p><strong>🌟 Lo que más gusta:</strong> La ubicación es muy buena , está a 3 min de la boda , el edificio histórico perfectamente conservado,  el ambiente muy señorial y un poco más económico que los demás.</p>
+
+            <a href="https://www.hotelpalaciodelosvelada.com/" target="_blank" class="btn">Ver Web Oficial</a>
+            <a href="https://www.booking.com/hotel/es/velada.es.html" target="_blank" class="btn">Reservar en Booking</a>
+        </div>
+        
+
+        <!-- Hotel 3: La Casa del Presidente -->
+        <div class="hotel-card">
+            <h2>🎩 La Casa del Presidente</h2>
+            <div class="estrellas">⭐⭐⭐⭐⭐</div>
+            
+            <div class="destacado">
+                <strong>👑 Hotel boutique de lujo - Antigua casa de Adolfo Suárez</strong>
+            </div>
+
+            <p><strong>📍 Ubicación:</strong> Calle Telares, 1 - En el corazón de Ávila, junto a la muralla</p>
+            
+            <p><strong>✨ Características destacadas:</strong></p>
+            <p>Hotel boutique de 5 estrellas con solo 10 habitaciones exclusivas en la que fue la residencia del primer Presidente de la Democracia Española. Construida en los años 70, esta casa fue testigo de importantes negociaciones de la Transición. Cuenta con piscina rodeada por la muralla, jardín centenario y chimenea. Un retiro de lujo con historia.</p>
+
+            <p><strong>🌟 Lo que más gusta:</strong> La historia única del edificio, el ambiente exclusivo y acogedor, la piscina con vistas a la muralla y las habitaciones amplísimas con camas king size.</p>
+            <p> Es la ocpión más exclusiva y si os interesa avisadnos quizás os podamos ayudar con la reserva</p>
+            <a href="https://www.lacasadelpresidente.es/" target="_blank" class="btn">Ver Web Oficial</a>
+            <a href="https://www.booking.com/hotel/es/la-casa-del-presidente.es.html" target="_blank" class="btn">Reservar en Booking</a>
+        </div>
+
+       
+
+        <div class="intro" style="margin-top: 3rem;">
+            <h3>💡 Información Útil</h3>
+            <p>Os recomendamos reservar con antelación, especialmente si venís el fin de semana de la boda.</p>
+
+            <p>Si necesitáis más opciones o tenéis alguna duda, no dudéis en contactarnos.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Anne & Pablo - ¡Nos vemos en Ávila!</p>
+    </footer>
+</body>
+</html>
