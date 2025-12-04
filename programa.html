@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Programa del Evento - Boda Anne & Pablo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        header {
+            background: linear-gradient(135deg, #06b6d4 0%, #10b981 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+        }
+
+        nav {
+            background: white;
+            padding: 1rem 2rem;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        nav a {
+            color: #0891b2;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        .intro {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            margin-bottom: 3rem;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .intro h2 {
+            color: #0891b2;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        .day-section {
+            background: white;
+            border-radius: 10px;
+            padding: 2.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .day-header {
+            background: linear-gradient(135deg, #06b6d4 0%, #10b981 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 2rem;
+            text-align: center;
+        }
+
+        .day-header h2 {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .day-header .date {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .timeline {
+            position: relative;
+            padding-left: 3rem;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 1rem;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(to bottom, #06b6d4, #10b981);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: 2.5rem;
+            padding-bottom: 2rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .timeline-item:last-child {
+            border-bottom: none;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -2.5rem;
+            top: 0.5rem;
+            width: 1.5rem;
+            height: 1.5rem;
+            background: white;
+            border: 3px solid #0891b2;
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px #e0f2f1;
+        }
+
+        .timeline-time {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: #0891b2;
+            margin-bottom: 0.5rem;
+        }
+
+        .timeline-title {
+            font-size: 1.8rem;
+            color: #333;
+            margin-bottom: 0.8rem;
+        }
+
+        .timeline-description {
+            font-size: 1.1rem;
+            color: #666;
+            line-height: 1.8;
+        }
+
+        .highlight-box {
+            background: #e0f2f1;
+            padding: 1.5rem;
+            border-radius: 8px;
+            border-left: 4px solid #0891b2;
+            margin-top: 1rem;
+        }
+
+        .highlight-box strong {
+            color: #0891b2;
+        }
+
+        .band-highlight {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            margin: 2rem 0;
+            border: 3px solid #f59e0b;
+        }
+
+        .band-highlight h3 {
+            font-size: 2rem;
+            color: #92400e;
+            margin-bottom: 0.5rem;
+        }
+
+        .band-highlight p {
+            font-size: 1.3rem;
+            color: #78350f;
+        }
+
+        .coming-soon {
+            background: #fff9e6;
+            padding: 1.5rem;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px dashed #f39c12;
+        }
+
+        .coming-soon h3 {
+            color: #f39c12;
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+        }
+
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+            
+            .timeline {
+                padding-left: 2rem;
+            }
+            
+            .timeline::before {
+                left: 0.5rem;
+            }
+            
+            .timeline-item::before {
+                left: -1.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>📅 Programa del Evento</h1>
+        <p>Todo lo que necesitas saber sobre nuestro fin de semana de celebración</p>
+    </header>
+
+    <nav>
+        <a href="index.html">← Volver a la Web Principal</a>
+        <a href="hoteles.html">Hoteles Recomendados</a>
+    </nav>
+
+    <div class="container">
+        <div class="intro">
+            <h2>¡Un fin de semana inolvidable en Ávila!</h2>
+            <p style="font-size: 1.2rem; margin-top: 1rem;">
+                Hemos preparado tres días llenos de celebración, tapas y diversión.<br>
+                Aquí encontraréis todos los detalles del programa.
+            </p>
+        </div>
+
+        <!-- VIERNES -->
+        <div class="day-section">
+            <div class="day-header">
+                <h2>🌙 Viernes 27 de Junio</h2>
+                <div class="date">Noche de Bienvenida</div>
+            </div>
+
+            <div class="coming-soon">
+                <h3>🍷 Tour de Tapas por Ávila</h3>
+                <p>Comenzaremos el fin de semana con una ruta de tapas por los mejores bares de Ávila.</p>
+                <p style="margin-top: 1rem;"><strong>📍 Detalles y horarios se confirmarán próximamente</strong></p>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 2rem;">
+                <strong>💡 Consejo:</strong> Si llegas el viernes, es una forma perfecta de conocer la ciudad y a otros invitados en un ambiente relajado.
+            </div>
+        </div>
+
+        <!-- SÁBADO -->
+        <div class="day-section">
+            <div class="day-header">
+                <h2>💒 Sábado 30 de Junio</h2>
+                <div class="date">¡El Gran Día!</div>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-time">⏰ 12:00h</div>
+                    <div class="timeline-title">💍 Ceremonia</div>
+                    <div class="timeline-description">
+                        Ceremonia íntima en el Palacio de los Sofraga. Un momento especial en un lugar histórico único, integrado en la muralla medieval de Ávila.
+                        <div class="highlight-box">
+                            <strong>📍 Lugar:</strong> Palacio de los Sofraga - Muralla de Ávila
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">⏰ 13:00h</div>
+                    <div class="timeline-title">🥂 Cóctel de Bienvenida</div>
+                    <div class="timeline-description">
+                        Después de la ceremonia, disfrutaremos de un cóctel en los jardines centenarios del Palacio, rodeados de cedros históricos y con vistas a la muralla. El momento perfecto para brindar, hacer fotos y celebrar.
+                        <div class="highlight-box">
+                            <strong>🍾 Barra Libre</strong> - Cócteles, vinos y refrescos
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">⏰ 14:30h</div>
+                    <div class="timeline-title">🍽️ Comida</div>
+                    <div class="timeline-description">
+                        Banquete en el Palacio de los Sofraga con gastronomía de la región. Un menú especialmente diseñado para la ocasión en un entorno histórico incomparable.
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-time">⏰ 18:00h</div>
+                    <div class="timeline-title">🎉 Fiesta y Baile</div>
+                    <div class="timeline-description">
+                        ¡Que empiece la diversión! Música en vivo, baile y celebración hasta altas horas de la noche.
+                    </div>
+                </div>
+            </div>
+
+            <div class="band-highlight">
+                <h3>🎸 Música en Directo</h3>
+                <p><strong>Langostino Smith</strong></p>
+                <p style="font-size: 1.1rem; margin-top: 0.5rem;">El estupendo grupo que nos hará bailar toda la noche</p>
+            </div>
+
+            <div class="highlight-box">
+                <strong>🍹 Barra Libre durante todo el evento</strong><br>
+                Porque la celebración no tiene límites
+            </div>
+        </div>
+
+        <!-- DOMINGO -->
+        <div class="day-section">
+            <div class="day-header">
+                <h2>☀️ Domingo 1 de Julio</h2>
+                <div class="date">Despedida</div>
+            </div>
+
+            <div class="coming-soon">
+                <h3>🥘 Tour de Tapas de Despedida</h3>
+                <p>Para cerrar el fin de semana como se merece, recorreremos los mejores bares de Ávila con una buena ruta de tapas.</p>
+                <p style="margin-top: 1rem;"><strong>📍 Hora y lugares se confirmarán próximamente</strong></p>
+            </div>
+
+            <div class="highlight-box" style="margin-top: 2rem;">
+                <strong>💡 Perfecto para:</strong> Recuperarse de la fiesta, seguir celebrando y despedirnos hasta que nos volvamos a ver.
+            </div>
+        </div>
+
+        <div class="intro" style="margin-top: 3rem;">
+            <h3>📝 Información Importante</h3>
+            <p style="margin-top: 1rem; font-size: 1.1rem;">
+                <strong>Código de vestimenta:</strong> Formal para la ceremonia y comida del sábado. Sugerimos evitar el color blanco.<br><br>
+                <strong>Confirmaciones:</strong> Por favor, confirmad vuestra asistencia antes del 1 de abril a través del formulario en la web principal.<br><br>
+                <strong>¿Dudas?</strong> No dudéis en contactarnos para cualquier pregunta sobre el programa.
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Anne & Pablo - ¡Nos vemos en Ávila!</p>
+    </footer>
+</body>
+</html>
