@@ -174,21 +174,21 @@
     </section>
 
     <section style="background: #f8f9fa;">
-        <h2>Te Apuntas?</h2>
+        <h2>Te apuntas?</h2>
         <div class="center">
             <p style="font-size: 1.2rem; margin-bottom: 2rem;">
                 Por favor, confírmanos tu asistencia antes del 1 de Abril
             </p>
             
-            <form id="confirmacionForm" style="max-width: 600px; margin: 0 auto; text-align: left;">
+            <form id="confirmacionForm" action="https://formspree.io/f/xnnezpkj" method="POST" style="max-width: 600px; margin: 0 auto; text-align: left;">
                 <div style="margin-bottom: 1.5rem;">
                     <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Nombre completo *</label>
-                    <input type="text" id="nombre" required style="width: 100%; padding: 0.8rem; border: 2px solid #ddd; border-radius: 5px; font-size: 1rem;">
+                    <input type="text" id="nombre" name="nombre" required style="width: 100%; padding: 0.8rem; border: 2px solid #ddd; border-radius: 5px; font-size: 1rem;">
                 </div>
 
                 <div style="margin-bottom: 1.5rem;">
                     <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">¿Confirmas tu asistencia? *</label>
-                    <select id="asistencia" required style="width: 100%; padding: 0.8rem; border: 2px solid #ddd; border-radius: 5px; font-size: 1rem;">
+                    <select id="asistencia" name="asistencia" required style="width: 100%; padding: 0.8rem; border: 2px solid #ddd; border-radius: 5px; font-size: 1rem;">
                         <option value="">Selecciona una opción</option>
                         <option value="si">Sí, asistiré</option>
                         <option value="no">No podré asistir</option>
@@ -199,7 +199,7 @@
                 <div id="detallesAsistencia" style="display: none;">
                     <div style="margin-bottom: 1.5rem;">
                         <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">¿Qué día vienes? *</label>
-                        <select id="dia" style="width: 100%; padding: 0.8rem; border: 2px solid #ddd; border-radius: 5px; font-size: 1rem;">
+                        <select id="dia" name="dia" style="width: 100%; padding: 0.8rem; border: 2px solid #ddd; border-radius: 5px; font-size: 1rem;">
                             <option value="">Selecciona una opción</option>
                             <option value="viernes">Viernes</option>
                             <option value="sabado">Sábado</option>
@@ -208,17 +208,33 @@
                     </div>
 
                     <div style="margin-bottom: 1.5rem;">
-                        <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Alojamiento *</label>
-                        <select id="alojamiento" style="width: 100%; padding: 0.8rem; border: 2px solid #ddd; border-radius: 5px; font-size: 1rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">¿Dónde te alojas? *</label>
+                        <select id="alojamiento" name="alojamiento" style="width: 100%; padding: 0.8rem; border: 2px solid #ddd; border-radius: 5px; font-size: 1rem;">
                             <option value="">Selecciona una opción</option>
-                            <option value="reservado">Tengo sitio reservado</option>
+                            <option value="sofraga">Palacio de los Sofraga (donde celebramos la boda)</option>
+                            <option value="velada">Palacio de los Velada</option>
+                            <option value="presidente">La Casa del Presidente</option>
+                            <option value="valderrabanos">Palacio de Valderábanos</option>
+                            <option value="otro">Me quedo en otro alojamiento</option>
+                            <option value="sin-alojamiento">Aún no tengo alojamiento</option>
                             <option value="no-duermo">No me quedo a dormir</option>
+                            <option value="no-sabemos">Aún no sabemos qué hacer</option>
+                        </select>
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Preferencia de menú *</label>
+                        <select id="menu" name="menu" style="width: 100%; padding: 0.8rem; border: 2px solid #ddd; border-radius: 5px; font-size: 1rem;">
+                            <option value="">Selecciona una opción</option>
+                            <option value="carne">Carne</option>
+                            <option value="pescado">Pescado</option>
+                            <option value="esperar">Prefiero esperar a ver el menú en detalle</option>
                         </select>
                     </div>
 
                     <div style="margin-bottom: 1.5rem;">
                         <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Comentarios adicionales</label>
-                        <textarea id="comentarios" rows="4" style="width: 100%; padding: 0.8rem; border: 2px solid #ddd; border-radius: 5px; font-size: 1rem;" placeholder="Alergias, necesidades especiales, etc."></textarea>
+                        <textarea id="comentarios" name="comentarios" rows="4" style="width: 100%; padding: 0.8rem; border: 2px solid #ddd; border-radius: 5px; font-size: 1rem;" placeholder="Alergias, necesidades especiales, etc."></textarea>
                     </div>
                 </div>
 
@@ -231,7 +247,7 @@
 
             <div id="mensajeExito" style="display: none; margin-top: 2rem; padding: 1.5rem; background: #d4edda; border: 2px solid #28a745; border-radius: 5px; color: #155724;">
                 <strong>✓ ¡Confirmación enviada!</strong><br>
-                Gracias por confirmar tu asistencia.
+                Gracias por confirmar tu asistencia. Nos vemos pronto.
             </div>
         </div>
     </section>
