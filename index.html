@@ -351,43 +351,7 @@
             }
         });
 
-        // Manejar envío del formulario
-        document.getElementById('confirmacionForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const nombre = document.getElementById('nombre').value;
-            const asistencia = document.getElementById('asistencia').value;
-            const dia = document.getElementById('dia').value;
-            const alojamiento = document.getElementById('alojamiento').value;
-            const comentarios = document.getElementById('comentarios').value;
 
-            // Construir el mensaje para el email
-            let mensaje = `Nombre: ${nombre}%0D%0A`;
-            
-            if (asistencia === 'si') {
-                mensaje += `Asistencia: Sí asistiré%0D%0A`;
-            } else if (asistencia === 'no') {
-                mensaje += `Asistencia: No podré asistir%0D%0A`;
-            } else {
-                mensaje += `Asistencia: No lo sé todavía%0D%0A`;
-            }
-            
-            if (asistencia === 'si') {
-                mensaje += `Día: ${dia}%0D%0A`;
-                mensaje += `Alojamiento: ${alojamiento}%0D%0A`;
-            }
-            
-            if (comentarios) {
-                mensaje += `Comentarios: ${comentarios}%0D%0A`;
-            }
-
-            // Abrir cliente de email (cambia tucorreo@ejemplo.com por tu email real)
-            window.location.href = `mailto:pmasiasanchez@gmail.com?subject=Confirmación de Asistencia - ${nombre}&body=${mensaje}`;
-            
-            // Mostrar mensaje de éxito
-            document.getElementById('mensajeExito').style.display = 'block';
-            document.getElementById('confirmacionForm').style.display = 'none';
-        });
     </script>
 </body>
 </html>
