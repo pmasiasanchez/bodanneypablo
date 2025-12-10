@@ -19,12 +19,7 @@
 
         .hero {
             height: 100vh;
-            background-image: 
-                linear-gradient(rgba(102, 126, 234, 0.7), rgba(118, 75, 162, 0.7)),
-                url('https://upload.wikimedia.org/wikipedia/commons/thumb/8/8e/Murallas_de_%C3%81vila_%28Spain%29.jpg/1200px-Murallas_de_%C3%81vila_%28Spain%29.jpg');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             display: flex;
             align-items: center;
             justify-content: center;
@@ -36,13 +31,45 @@
             font-size: 4rem;
             margin-bottom: 1rem;
             font-weight: 300;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
 
         .hero-content p {
             font-size: 1.5rem;
             margin-bottom: 2rem;
-            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .separador-avila {
+            height: 400px;
+            background-image: 
+                linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                url('fotoavila.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 4rem 0;
+        }
+
+        .separador-avila .texto-sobre-imagen {
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            background: rgba(102, 126, 234, 0.85);
+            border-radius: 10px;
+            max-width: 600px;
+        }
+
+        .separador-avila h2 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .separador-avila p {
+            font-size: 1.3rem;
+            line-height: 1.8;
         }
 
         .fecha {
@@ -180,6 +207,14 @@
             </div>
         </div>
     </section>
+
+    <!-- Separador con imagen de Ávila -->
+    <div class="separador-avila">
+        <div class="texto-sobre-imagen">
+            <h2>Nos casamos en Ávila</h2>
+            <p>Una ciudad histórica con encanto medieval, rodeada de murallas del siglo XI. El escenario perfecto para nuestra celebración.</p>
+        </div>
+    </div>
 
     <section style="background: #f8f9fa;">
         <h2>Te apuntas?</h2>
