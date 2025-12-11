@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuestra Boda</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #333;
+        }
+
+        .hero {
+            height: 100vh;
+            background-image: 
+                linear-gradient(rgba(102, 126, 234, 0.75), rgba(118, 75, 162, 0.75)),
+                url('imagenes/fotoavila.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero-content h1 {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+            font-weight: 300;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 1.5rem;
+            margin-bottom: 2rem;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .separador-avila {
+            height: 400px;
+            background-image: 
+                linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+                url('imagenes/fotoavila.jpg');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 4rem 0;
+        }
+
+        .separador-avila .texto-sobre-imagen {
+            color: white;
+            text-align: center;
+            padding: 2rem;
+            background: rgba(102, 126, 234, 0.85);
+            border-radius: 10px;
+            max-width: 600px;
+        }
+
+        .separador-avila h2 {
+            color: white;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .separador-avila p {
+            font-size: 1.3rem;
+            line-height: 1.8;
+        }
+
+        .fecha {
+            font-size: 2rem;
+            font-weight: bold;
+            margin-top: 2rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            font-size: 2.5rem;
+            text-align: center;
+            margin-bottom: 3rem;
+            color: #667eea;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .info-card {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .info-card h3 {
+            color: #667eea;
+            margin-bottom: 1rem;
+            font-size: 1.5rem;
+        }
+
+        .info-card p {
+            margin-bottom: 0.5rem;
+        }
+
+        .confirmar-btn {
+            background: #667eea;
+            color: white;
+            padding: 1rem 3rem;
+            border: none;
+            border-radius: 50px;
+            font-size: 1.2rem;
+            cursor: pointer;
+            margin-top: 2rem;
+            transition: all 0.3s;
+        }
+
+        .confirmar-btn:hover {
+            background: #764ba2;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 2rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+            .hero-content p {
+                font-size: 1.2rem;
+            }
+            .fecha {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Anne & Pablo</h1>
+            <p>¡Nos casamos!</p>
+            <div class="fecha">30 de Mayo, 2025</div>
+        </div>
+    </div>
+
+    <section>
+        <h2>Información del Evento</h2>
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>💒 Ceremonia & Celebración</h3>
+                <p><strong>Fecha:</strong> 30 de Mayo, 2025</p>
+                <p><strong>Hora:</strong> 12:00h</p>
+                <p><strong>Lugar:</strong> Palacio de los Sofraga</p>
+                <p>Ávila</p>
+                 <a href="programa.html" style="color: #667eea; text-decoration: none; font-weight: bold;">
+                Ver detalle del programa del fin de semana →
+            </a>
+            </div>
+        <div class="info-card">
+            <h3>🏨 Alojamiento</h3>
+            <p>Hemos seleccionado hoteles especiales en Ávila</p>
+            <a href="hoteles.html" style="color: #667eea; text-decoration: none; font-weight: bold;">
+                Ver hoteles recomendados →
+            </a>
+        </div>
+            <div class="info-card">
+                <h3>📍 Cómo Llegar</h3>
+                <p><strong>Dirección:</strong></p>
+                <p>Palacio de los Sofraga</p>
+                <p>Ávila</p>
+                <p style="margin-top: 1rem;">
+                    <a href="https://maps.google.com/?q=Palacio+de+los+Sofraga+Ávila" target="_blank" style="color: #667eea; text-decoration: none;">
+                        🗺️ Ver en Google Maps
+                    </a>
+                </p>
+            </div>
+
+            <div class="info-card">
+                <h3>👔 Código de Vestimenta</h3>
+                <p><strong>Etiqueta:</strong> Formal</p>
+                <p>Sugerimos evitar el color blanco</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Separador con imagen de Ávila -->
+    <div class="separador-avila">
+        <div class="texto-sobre-imagen">
+            <h2>Nos casamos en Ávila</h2>
+            <p>Una ciudad histórica con encanto medieval, rodeada de murallas del siglo XI. El escenario perfecto para nuestra celebración.</p>
+        </div>
+    </div>
+
+    <section style="background: #f8f9fa;">
+        <h2>Te apuntas?</h2>
+        <div class="center">
+            <p style="font-size: 1.2rem; margin-bottom: 2rem;">
+                Por favor, confírmanos tu asistencia antes del 1 de Abril
+            </p>
+            
+            <form id="confirmacionForm" action="https://formspree.io/f/xnnezpkj" method="POST" style="max-width: 600px; margin: 0 auto; text-align: left;">
+                <div style="margin-bottom: 1.5rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Nombre completo *</label>
+                    <input type="text" id="nombre" name="nombre" required style="width: 100%; padding: 0.8rem; border: 2px solid #ddd; border-radius: 5px; font-size: 1rem;">
+                </div>
+
+                <div style="margin-bottom: 1.5rem;">
+                    <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">¿Confirmas tu asistencia? *</label>
+                    <select id="asistencia" name="asistencia" required style="width: 100%; padding: 0.8rem; border: 2px solid #ddd; border-radius: 5px; font-size: 1rem;">
+                        <option value="">Selecciona una opción</option>
+                        <option value="si">Sí, asistiré</option>
+                        <option value="no">No podré asistir</option>
+                        <option value="nolose">No lo sé todavía</option>
+                    </select>
+                </div>
+
+                <div id="detallesAsistencia" style="display: none;">
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">¿Qué día vienes? *</label>
+                        <select id="dia" name="dia" style="width: 100%; padding: 0.8rem; border: 2px solid #ddd; border-radius: 5px; font-size: 1rem;">
+                            <option value="">Selecciona una opción</option>
+                            <option value="viernes">Viernes</option>
+                            <option value="sabado">Sábado</option>
+                            <option value="ambos">Ambos días</option>
+                        </select>
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">¿Dónde te alojas? *</label>
+                        <select id="alojamiento" name="alojamiento" style="width: 100%; padding: 0.8rem; border: 2px solid #ddd; border-radius: 5px; font-size: 1rem;">
+                            <option value="">Selecciona una opción</option>
+                            <option value="sofraga">Palacio de los Sofraga (donde celebramos la boda)</option>
+                            <option value="velada">Palacio de los Velada</option>
+                            <option value="presidente">La Casa del Presidente</option>
+                            <option value="valderrabanos">Palacio de Valderábanos</option>
+                            <option value="otro">Me quedo en otro alojamiento</option>
+                            <option value="sin-alojamiento">Aún no tengo alojamiento</option>
+                            <option value="no-duermo">No me quedo a dormir</option>
+                            <option value="no-sabemos">Aún no sabemos qué hacer</option>
+                        </select>
+                    </div>
+
+                    <div id="transporteSection" style="display: none; margin-bottom: 1.5rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">¿Te quedarás hasta el final de la boda? *</label>
+                        <select id="transporte" name="transporte" style="width: 100%; padding: 0.8rem; border: 2px solid #ddd; border-radius: 5px; font-size: 1rem;">
+                            <option value="">Selecciona una opción</option>
+                            <option value="me-voy-21h">Me volveré sobre las 21h o antes</option>
+                            <option value="final-con-transporte">Me quedaré hasta el final, tengo transporte</option>
+                            <option value="final-necesito-bus">Me quedo hasta el final y me apuntaría al bus si lo hay</option>
+                        </select>
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Preferencia de menú *</label>
+                        <select id="menu" name="menu" style="width: 100%; padding: 0.8rem; border: 2px solid #ddd; border-radius: 5px; font-size: 1rem;">
+                            <option value="">Selecciona una opción</option>
+                            <option value="carne">Carne</option>
+                            <option value="pescado">Pescado</option>
+                            <option value="esperar">Prefiero esperar a ver el menú en detalle</option>
+                        </select>
+                    </div>
+
+                    <div style="margin-bottom: 1.5rem;">
+                        <label style="display: block; margin-bottom: 0.5rem; font-weight: bold;">Comentarios adicionales</label>
+                        <textarea id="comentarios" name="comentarios" rows="4" style="width: 100%; padding: 0.8rem; border: 2px solid #ddd; border-radius: 5px; font-size: 1rem;" placeholder="Alergias, necesidades especiales, etc."></textarea>
+                    </div>
+                </div>
+
+                <div style="text-align: center;">
+                    <button type="submit" class="confirmar-btn">
+                        Enviar Confirmación
+                    </button>
+                </div>
+            </form>
+
+            <div id="mensajeExito" style="display: none; margin-top: 2rem; padding: 1.5rem; background: #d4edda; border: 2px solid #28a745; border-radius: 5px; color: #155724;">
+                <strong>✓ ¡Confirmación enviada!</strong><br>
+                Gracias por confirmar tu asistencia. Nos vemos pronto.
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2>Nos ayudas?</h2>
+        <div class="center">
+            <p style="font-size: 1.2rem;">
+                Vuestra presencia es nuestro mejor regalo.<br>
+                Si deseáis tener un detalle con nosotros,<br>
+                os dejamos nuestro número de cuenta:
+            </p>
+            <p style="font-size: 1.5rem; margin-top: 2rem; color: #667eea;">
+                <strong>ES00 </strong>
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Anne & Pablo - ¡Os esperamos!</p>
+    </footer>
+
+    <script>
+        // Mostrar/ocultar detalles según asistencia
+        document.getElementById('asistencia').addEventListener('change', function() {
+            const detalles = document.getElementById('detallesAsistencia');
+            const dia = document.getElementById('dia');
+            const alojamiento = document.getElementById('alojamiento');
+            const menu = document.getElementById('menu');
+            
+            if (this.value === 'si') {
+                detalles.style.display = 'block';
+                dia.required = true;
+                alojamiento.required = true;
+                menu.required = true;
+            } else {
+                detalles.style.display = 'none';
+                dia.required = false;
+                alojamiento.required = false;
+                menu.required = false;
+            }
+        });
+
+        // Mostrar/ocultar sección de transporte si no se quedan a dormir
+        document.getElementById('alojamiento').addEventListener('change', function() {
+            const transporteSection = document.getElementById('transporteSection');
+            const transporte = document.getElementById('transporte');
+            
+            if (this.value === 'no-duermo') {
+                transporteSection.style.display = 'block';
+                transporte.required = true;
+            } else {
+                transporteSection.style.display = 'none';
+                transporte.required = false;
+            }
+        });
+    </script>
+</body>
+</html>
