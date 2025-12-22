@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+        <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -18,13 +18,13 @@
         }
 
         .hero {
-            height: 100vh;
+            height: 100svh;
             background-image: 
                 linear-gradient(rgba(102, 126, 234, 0.75), rgba(118, 75, 162, 0.75)),
                 url('../imagenes/fotoavila.jpg');
             background-size: cover;
             background-position: center;
-            background-attachment: fixed;
+            background-repeat: no-repeat
             display: flex;
             align-items: center;
             justify-content: center;
@@ -32,6 +32,12 @@
             color: white;
         }
 
+    @media (min-width: 769px) {
+        .hero {
+            background-attachment: fixed;
+        }
+        }
+        
         .hero-content h1 {
             font-size: 4rem;
             margin-bottom: 1rem;
