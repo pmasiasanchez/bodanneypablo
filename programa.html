@@ -93,7 +93,7 @@
             margin-bottom: 1.8rem;
         }
 
-        /* Encabezados de día SIN fondo turquesa, texto teja */
+        /* Encabezados de día sin fondo, texto teja */
         .day-header {
             background: transparent;
             color: #C86340;
@@ -121,51 +121,37 @@
             color: #C86340;
         }
 
-.timeline {
-    position: relative;
-    padding-left: 1.8rem;   /* un poco menos margen a la izquierda */
-    margin-top: 0.6rem;
-}
+        .timeline {
+            position: relative;
+            padding-left: 1.8rem;
+            margin-top: 0.6rem;
+        }
 
-.timeline::before {
-    content: '';
-    position: absolute;
-    left: 0.25rem;          /* posición de la línea vertical */
-    top: 0;
-    bottom: 0;
-    width: 2px;
-    background: #ead3ca;
-}
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 0.3rem;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #ead3ca;
+        }
 
-.timeline-item {
-    position: relative;
-    margin-bottom: 1.6rem;
-    padding-bottom: 1.2rem;
-    border-bottom: 1px solid #e0e0e0;
-}
+        .timeline-item {
+            position: relative;
+            margin-bottom: 1.6rem;
+            padding-bottom: 1.2rem;
+            border-bottom: 1px solid #e0e0e0;
+        }
 
-.timeline-item:last-child {
-    border-bottom: none;
-}
-
-.timeline-item::before {
-    content: '';
-    position: absolute;
-    left: 0.18rem;          /* casi pegada a la línea (0.25rem) */
-    top: 0.55rem;
-    width: 0.35rem;         /* mucho más pequeña */
-    height: 0.35rem;
-    background: white;
-    border: 1.5px solid #C86340;
-    border-radius: 50%;
-    box-shadow: 0 0 0 1px #f2ded6;  /* halo muy fino */
-}
-
+        .timeline-item:last-child {
+            border-bottom: none;
+        }
 
         .timeline-time {
-            font-size: 1.1rem;
-            font-weight: 500;
-            margin-bottom: 0.2rem;
+            font-size: 1.25rem;      /* más grande */
+            font-weight: 600;        /* más gordita */
+            margin-bottom: 0.25rem;
         }
 
         .timeline-title {
@@ -230,13 +216,10 @@
                 font-size: 2rem;
             }
             .timeline {
-                padding-left: 1.8rem;
+                padding-left: 1.6rem;
             }
             .timeline::before {
-                left: 0.5rem;
-            }
-            .timeline-item::before {
-                left: -0.2rem;
+                left: 0.25rem;
             }
         }
     </style>
@@ -282,7 +265,11 @@
                     <div class="timeline-description">
                         Ceremonia íntima en el Palacio de los Sofraga, un lugar histórico integrado en la muralla medieval de Ávila.
                         <div class="highlight-box">
-                            <strong>📍 Lugar:</strong> Palacio de los Sofraga - Muralla de Ávila
+                            <strong>📍 Lugar:</strong>
+                            Palacio de los Sofraga - Muralla de Ávila<br>
+                            <a href="https://maps.app.goo.gl/AXLBcv9AG2eUZkkW7" target="_blank" style="color:#0891b2; text-decoration:none; font-weight:600;">
+                                Ver en Google Maps
+                            </a>
                         </div>
                     </div>
                 </div>
