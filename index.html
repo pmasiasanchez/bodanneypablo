@@ -9,7 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=League+Script&family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500&display=swap" rel="stylesheet">
-    <!-- League Script y Roboto Flex desde Google Fonts [web:41][web:46][web:52] -->
+    <!-- League Script y Roboto Flex -->
 
     <style>
         * {
@@ -23,6 +23,28 @@
             line-height: 1.6;
             color: #333;
             font-size: 0.9rem; /* texto un poco más pequeño */
+        }
+
+        /* Selector de idioma */
+        .language-switch {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255,255,255,0.9);
+            padding: 0.4rem 0.8rem;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        .language-switch a {
+            color: #C86340;
+            text-decoration: none;
+            margin: 0 0.2rem;
+            font-weight: 500;
+        }
+        .language-switch span {
+            font-weight: 600;
         }
 
         .hero {
@@ -62,7 +84,7 @@
             height: 400px;
             background-image: 
                 linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-                url('https://anneypablo.es/imagenes/fotoavila.jpg'); /* misma foto; puedes cambiarla también */
+                url('https://anneypablo.es/imagenes/fotoavila.jpg');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -181,6 +203,10 @@
     </style>
 </head>
 <body>
+    <div class="language-switch">
+        <span>ES</span> | <a href="index-de.html">DE</a>
+    </div>
+
     <div class="hero">
         <div class="hero-content">
             <h1>Annemarie y Pablo</h1>
