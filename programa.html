@@ -121,44 +121,45 @@
             color: #C86340;
         }
 
-        .timeline {
-            position: relative;
-            padding-left: 2.2rem;
-            margin-top: 0.6rem;
+   .timeline {
+    position: relative;
+    padding-left: 2.2rem;
+    margin-top: 0.6rem;
+
         }
 
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 0.6rem;
-            top: 0;
-            bottom: 0;
-            width: 2px;
-            background: #ead3ca;
+       .timeline::before {
+    content: '';
+    position: absolute;
+    left: 0.4rem;          /* más a la izquierda */
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: #ead3ca;
         }
 
-        .timeline-item {
-            position: relative;
-            margin-bottom: 1.6rem;
-            padding-bottom: 1.2rem;
-            border-bottom: 1px solid #e0e0e0;
+      .timeline-item {
+    position: relative;
+    margin-bottom: 1.6rem;
+    padding-bottom: 1.2rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+    .timeline-item:last-child {
+    border-bottom: none;
         }
 
-        .timeline-item:last-child {
-            border-bottom: none;
-        }
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -0.1rem;
-            top: 0.4rem;
-            width: 0.9rem;
-            height: 0.9rem;
-            background: white;
-            border: 2px solid #C86340;
-            border-radius: 50%;
-            box-shadow: 0 0 0 3px #f2ded6;
+       .timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -0.05rem;        /* más a la izquierda */
+    top: 0.45rem;
+    width: 0.6rem;         /* bolita más pequeña */
+    height: 0.6rem;        /* bolita más pequeña */
+    background: white;
+    border: 2px solid #C86340;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px #f2ded6; /* halo también más fino */
         }
 
         .timeline-time {
