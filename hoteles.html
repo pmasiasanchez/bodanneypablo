@@ -19,13 +19,34 @@
         }
 
         body {
-            font-family: 'Roboto Flex', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-            line-height: 1.6;
-            color: #333;
-            font-size: 0.9rem;
-            background: #f8f9fa;
-        }
+        font-family: 'Roboto Flex', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.6;
+        color: #333;
+        font-size: 0.9rem;
+        background: #f8f9fa;
+    }
 
+    /* Selector de idioma */
+    .language-switch {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        background: rgba(255,255,255,0.9);
+        padding: 0.4rem 0.8rem;
+        border-radius: 999px;
+        font-size: 0.8rem;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        z-index: 1000;
+    }
+    .language-switch a {
+        color: #C86340;
+        text-decoration: none;
+        margin: 0 0.2rem;
+        font-weight: 500;
+    }
+    .language-switch span {
+        font-weight: 600;
+    }
         .hero {
             min-height: 40vh;
             background-image:
