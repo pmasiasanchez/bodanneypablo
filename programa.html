@@ -123,14 +123,14 @@
 
 .timeline {
     position: relative;
-    padding-left: 2rem;      /* un poco menos margen general */
+    padding-left: 1.8rem;   /* un poco menos margen a la izquierda */
     margin-top: 0.6rem;
 }
 
 .timeline::before {
     content: '';
     position: absolute;
-    left: 0.3rem;            /* muy cerca del borde izquierdo */
+    left: 0.25rem;          /* posición de la línea vertical */
     top: 0;
     bottom: 0;
     width: 2px;
@@ -151,15 +151,16 @@
 .timeline-item::before {
     content: '';
     position: absolute;
-    left: 0.1rem;            /* casi encima de la línea vertical */
-    top: 0.5rem;
-    width: 0.5rem;           /* aún más pequeña */
-    height: 0.5rem;
+    left: 0.18rem;          /* casi pegada a la línea (0.25rem) */
+    top: 0.55rem;
+    width: 0.35rem;         /* mucho más pequeña */
+    height: 0.35rem;
     background: white;
-    border: 2px solid #C86340;
+    border: 1.5px solid #C86340;
     border-radius: 50%;
-    box-shadow: 0 0 0 1.5px #f2ded6; /* halo fino */
+    box-shadow: 0 0 0 1px #f2ded6;  /* halo muy fino */
 }
+
 
         .timeline-time {
             font-size: 1.1rem;
