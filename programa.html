@@ -121,46 +121,45 @@
             color: #C86340;
         }
 
-   .timeline {
+  .timeline {
     position: relative;
-    padding-left: 2.2rem;
+    padding-left: 2rem;      /* un poco menos margen general */
     margin-top: 0.6rem;
+}
 
-        }
-
-       .timeline::before {
+.timeline::before {
     content: '';
     position: absolute;
-    left: 0.4rem;          /* más a la izquierda */
+    left: 0.3rem;            /* muy cerca del borde izquierdo */
     top: 0;
     bottom: 0;
     width: 2px;
     background: #ead3ca;
-        }
+}
 
-      .timeline-item {
+.timeline-item {
     position: relative;
     margin-bottom: 1.6rem;
     padding-bottom: 1.2rem;
     border-bottom: 1px solid #e0e0e0;
 }
 
-    .timeline-item:last-child {
+.timeline-item:last-child {
     border-bottom: none;
-        }
+}
 
-       .timeline-item::before {
+.timeline-item::before {
     content: '';
     position: absolute;
-    left: -0.05rem;        /* más a la izquierda */
-    top: 0.45rem;
-    width: 0.6rem;         /* bolita más pequeña */
-    height: 0.6rem;        /* bolita más pequeña */
+    left: 0.1rem;            /* casi encima de la línea vertical */
+    top: 0.5rem;
+    width: 0.5rem;           /* aún más pequeña */
+    height: 0.5rem;
     background: white;
     border: 2px solid #C86340;
     border-radius: 50%;
-    box-shadow: 0 0 0 2px #f2ded6; /* halo también más fino */
-        }
+    box-shadow: 0 0 0 1.5px #f2ded6; /* halo fino */
+}
 
         .timeline-time {
             font-size: 1.1rem;
