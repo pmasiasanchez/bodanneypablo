@@ -1,1 +1,382 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unsere Hochzeit</title>
+
+    <!-- Google Fonts: League Script (Titel) und Roboto Flex (Text) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Script&family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500&display=swap" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto Flex', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            line-height: 1.6;
+            color: #333;
+            font-size: 0.9rem;
+        }
+
+        .hero {
+            min-height: 100svh;
+            background-image: 
+                linear-gradient(rgba(245, 245, 245, 0.70), rgba(245, 245, 245, 0.70)),
+                url('https://anneypablo.es/imagenes/avila2.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #C86340;
+        }
+
+        .hero-content h1 {
+            font-family: 'Roboto Flex', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            font-size: 3.2rem;
+            margin-bottom: 0.8rem;
+            font-weight: 400;
+        }
+
+        .hero-content p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .fecha {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-top: 1.5rem;
+        }
+
+        section {
+            padding: 3rem 1.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        h2 {
+           font-family: 'Roboto Flex', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            font-size: 2.3rem;
+            text-align: center;
+            margin-bottom: 2.5rem;
+            color: #E07A55;
+        }
+
+        .info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.8rem;
+            margin-top: 1.5rem;
+        }
+
+        .info-card {
+            background: #f8f9fa;
+            padding: 1.6rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .info-card h3 {
+           font-family: 'Roboto Flex', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            color: #E07A55;
+            margin-bottom: 0.8rem;
+            font-size: 1.7rem;
+        }
+
+        .info-card p {
+            margin-bottom: 0.4rem;
+            font-size: 0.9rem;
+        }
+
+        .center {
+            text-align: center;
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            font-size: 0.85rem;
+        }
+
+        /* kleiner Sprachumschalter */
+        .language-switch {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255,255,255,0.9);
+            padding: 0.4rem 0.8rem;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+        .language-switch a {
+            color: #C86340;
+            text-decoration: none;
+            margin: 0 0.2rem;
+            font-weight: 500;
+        }
+        .language-switch span {
+            font-weight: 600;
+        }
+
+        @media (max-width: 768px) {
+            .hero-content h1 {
+                font-size: 2.4rem;
+            }
+            .hero-content p {
+                font-size: 1rem;
+            }
+            .fecha {
+                font-size: 1.1rem;
+            }
+            h2 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Sprachumschalter -->
+    <div class="language-switch">
+        <a href="index.html">ES</a> | <span>DE</span>
+    </div>
+
+    <div class="hero">
+        <div class="hero-content">
+            <h1>Annemarie &amp; Pablo</h1>
+            <div class="fecha">30. Mai 2026</div>
+        </div>
+    </div>
+
+    <section>
+        <h2>Informationen zu unserer Hochzeit</h2>
+        <div class="info-grid">
+            <div class="info-card">
+                <h3>Trauung &amp; Feier</h3>
+                <p><strong>Datum:</strong> 30. Mai 2026</p>
+                <p><strong>Uhrzeit:</strong> 12:00 Uhr</p>
+                <p><strong>Ort:</strong> Palacio de los Sofraga</p>
+                <p>Ávila</p>
+                <a href="programa-de.html" style="color: #E07A55; text-decoration: none; font-weight: 500; font-size: 0.9rem;">
+                    Zum kompletten Programm →
+                </a>
+            </div>
+
+            <div class="info-card">
+                <h3>Unterkunft</h3>
+                <p>Wir haben ein paar besondere Hotels in Ávila für euch ausgewählt.</p>
+                <a href="hoteles-de.html" style="color: #E07A55; text-decoration: none; font-weight: 500; font-size: 0.9rem;">
+                    Empfohlene Hotels ansehen →
+                </a>
+            </div>
+
+            <div class="info-card">
+                <h3>Anreise</h3>
+                <p><strong>Palacio de los Sofraga, Ávila</strong></p>
+                <p>Von Madrid aus mit dem Auto (mit oder ohne Maut) oder mit Regional- und Mittelstreckenzügen.</p>
+                <p style="margin-top: 1rem;">
+                    <a href="https://maps.google.com/?q=Palacio+de+los+Sofraga+Ávila" target="_blank" style="color: #667eea; text-decoration: none; font-size: 0.9rem;">
+                        📍Auf Google Maps ansehen
+                    </a>
+                </p>
+                <p><strong>Parken:</strong></p>
+                <p>Wir empfehlen außerhalb der Stadtmauer zu parken – „Puerta de San Vicente“ ist am günstigsten gelegen.</p>
+            </div>
+
+            <div class="info-card">
+                <h3>Dresscode</h3>
+                <p><strong>Formal:</strong> festliche Kleidung</p>
+                <p>Wir bitten euch, auf Weiß zu verzichten.</p>
+                <p>Ávila hat Kopfsteinpflaster – denkt also an bequemes Schuhwerk. Im Palacio de los Sofraga gibt es eine Garderobe.</p>
+            </div>
+            
+            <div class="info-card">
+                <h3>Menü</h3>
+                <p>Wenn ihr eure Zusage unten bestätigt, könnt ihr das Hauptgericht auswählen. Für besondere Menüs, Allergien oder Unverträglichkeiten nutzt bitte das Kommentarfeld.</p>
+            </div>
+        </div>
+    </section>
+
+    <section style="background: #D1E3CE; padding: 3rem 1rem;">
+        <h2 style="text-align: center; font-size: 2rem; margin-bottom: 1rem;">Wir freuen uns, wenn ihr dabei seid</h2>
+
+        <div class="center" style="max-width: 700px; margin: 0 auto;">
+            <p style="font-size: 1rem; margin-bottom: 2rem; text-align: center;">
+                Bitte gebt uns bis zum <strong>1. April</strong> Bescheid, ob ihr kommen könnt. Das hilft uns sehr bei der Planung.
+            </p>
+            
+            <form id="confirmacionForm" 
+                  action="https://formspree.io/f/xkgdzyao" 
+                  method="POST" 
+                  style="text-align: left; font-size: 0.9rem;">
+
+                <!-- NAME -->
+                <div style="margin-bottom: 1.2rem;">
+                    <label for="nombre" style="display: block; margin-bottom: 0.4rem; font-weight: 600;">
+                        Vollständiger Name *
+                    </label>
+                    <input type="text" id="nombre" name="nombre" required
+                           style="width: 100%; padding: 0.6rem; border: 2px solid #ddd; 
+                                  border-radius: 5px; font-size: 0.9rem;">
+                </div>
+
+                <!-- ZUSAGE -->
+                <div style="margin-bottom: 1.2rem;">
+                    <label for="asistencia" style="display: block; margin-bottom: 0.4rem; font-weight: 600;">
+                        Kommst du / kommt ihr zur Hochzeit? *
+                    </label>
+                    <select id="asistencia" name="asistencia" required
+                            style="width: 100%; padding: 0.6rem; border: 2px solid #ddd; 
+                                   border-radius: 5px; font-size: 0.9rem;">
+                        <option value="">Bitte wähle eine Option</option>
+                        <option value="si">Ja, ich/wir komme(n)</option>
+                        <option value="no">Leider nein</option>
+                        <option value="nolose">Ich/Wir wissen es noch nicht</option>
+                    </select>
+                </div>
+
+                <!-- BEREICH NUR WENN ZUSAGE -->
+                <div id="detallesAsistencia" style="display: none;">
+
+                    <!-- TAGE -->
+                    <div style="margin-bottom: 1.2rem;">
+                        <label for="dia" style="display: block; margin-bottom: 0.4rem; font-weight: 600;">
+                            Wie viele Tage bleibt ihr in Ávila? *
+                        </label>
+                        <select id="dia" name="dia"
+                                style="width: 100%; padding: 0.6rem; border: 2px solid #ddd; 
+                                       border-radius: 5px; font-size: 0.9rem;">
+                            <option value="">Bitte wähle eine Option</option>
+                            <option value="viernes a domingo">Anreise Freitag, Abreise Sonntag</option>
+                            <option value="sabado a domingo">Anreise Samstag, Abreise Sonntag</option>
+                            <option value="solo sabado boda">Nur am Samstag zur Hochzeit, ohne Übernachtung</option>
+                            <option value="Nose">Ich/Wir wissen es noch nicht</option>
+                        </select>
+                    </div>
+
+                    <!-- UNTERKUNFT -->
+                    <div style="margin-bottom: 1.2rem;">
+                        <label for="alojamiento" style="display: block; margin-bottom: 0.4rem; font-weight: 600;">
+                            Wo übernachtet ihr? *
+                        </label>
+                        <select id="alojamiento" name="alojamiento"
+                                style="width: 100%; padding: 0.6rem; border: 2px solid #ddd; 
+                                       border-radius: 5px; font-size: 0.9rem;">
+                            <option value="">Bitte wähle eine Option</option>
+                            <option value="sofraga">Palacio de los Sofraga (Hochzeit)</option>
+                            <option value="velada">Palacio de los Velada</option>
+                            <option value="presidente">La Casa del Presidente</option>
+                            <option value="valderrabanos">Palacio de Valderábanos</option>
+                            <option value="otro">Andere Unterkunft</option>
+                            <option value="sin-alojamiento">Ich habe noch keine Unterkunft</option>
+                            <option value="no-duermo">Ich übernachte nicht in Ávila</option>
+                            <option value="no-sabemos">Wir wissen es noch nicht</option>
+                        </select>
+                    </div>
+
+                    <!-- MENÜ -->
+                    <div style="margin-bottom: 1.2rem;">
+                        <label for="menu" style="display: block; margin-bottom: 0.4rem; font-weight: 600;">
+                            Menüwunsch (Hauptgang) *
+                        </label>
+                        <select id="menu" name="menu"
+                                style="width: 100%; padding: 0.6rem; border: 2px solid #ddd; 
+                                       border-radius: 5px; font-size: 0.9rem;">
+                            <option value="">Bitte wähle eine Option</option>
+                            <option value="carne">Fleisch: Rinderfilet (Avileña) mit Foie-Sauce</option>
+                            <option value="pescado">Fisch: Steinbutt mit Emulsion seiner Haut und Champagner-Schaum</option>
+                            <option value="esperar">Ich/Wir weiß/wissen es noch nicht</option>
+                        </select>
+                    </div>
+
+                    <!-- EMAIL -->
+                    <div style="margin-bottom: 1.2rem;">
+                        <label for="email" style="display: block; margin-bottom: 0.4rem; font-weight: 600;">
+                            E‑Mail-Adresse *
+                        </label>
+                        <input type="text" id="email" name="email" required
+                               style="width: 100%; padding: 0.6rem; border: 2px solid #ddd; 
+                                      border-radius: 5px; font-size: 0.9rem;">
+                    </div>
+                    
+                    <!-- KOMMENTARE -->
+                    <div style="margin-bottom: 1.2rem;">
+                        <label for="comentarios" style="display: block; margin-bottom: 0.4rem; font-weight: 600;">
+                            Zusätzliche Hinweise
+                        </label>
+                        <textarea id="comentarios" name="comentarios" rows="4"
+                                  style="width: 100%; padding: 0.6rem; border: 2px solid #ddd;
+                                         border-radius: 5px; font-size: 0.9rem;"
+                                  placeholder="Allergien, Unverträglichkeiten, vegetarisch/vegan, besondere Bedürfnisse usw."></textarea>
+                    </div>
+                </div>
+
+                <!-- BUTTON -->
+                <div style="text-align: center;">
+                    <button type="submit"
+                            style="background: #C86340; color: white; padding: 0.8rem 1.8rem;
+                                   border-radius: 40px; border: none; font-size: 1rem; 
+                                   cursor: pointer; transition: 0.3s;">
+                        Zusage senden
+                    </button>
+                </div>
+            </form>
+
+            <!-- ERFOLGSMELDUNG -->
+            <div id="mensajeExito" 
+                 style="display: none; margin-top: 2rem; padding: 1.2rem; background: #d4edda; 
+                        border: 2px solid #28a745; border-radius: 5px; color: #155724; font-size: 0.9rem;">
+                <strong>✓ Zusage angekommen!</strong><br>
+                Vielen Dank für eure Rückmeldung – wir freuen uns riesig auf den 30. Mai! Liebe Grüße, Anne &amp; Pablo.
+            </div>
+        </div>
+    </section>
+  
+    <script>
+        // Bereich ein-/ausblenden, je nachdem ob "Ja" ausgewählt ist
+        document.getElementById("asistencia").addEventListener("change", function() {
+            const detalles = document.getElementById("detallesAsistencia");
+            if (this.value === "si") {
+                detalles.style.display = "block";
+            } else {
+                detalles.style.display = "none";
+            }
+        });
+
+        // Erfolgsmeldung nach dem Senden anzeigen
+        document.getElementById("confirmacionForm").addEventListener("submit", function() {
+            document.getElementById("mensajeExito").style.display = "block";
+        });
+    </script>
+
+    <section>
+        <h2>Wenn ihr uns beschenken möchtet …</h2>
+        <div class="center">
+            <p style="font-size: 1rem;">
+                Eure Anwesenheit ist für uns das schönste Geschenk.<br>
+                Wenn ihr uns trotzdem eine kleine Freude machen möchtet, findet ihr hier unsere Kontodaten:
+            </p>
+            <p style="font-size: 1.3rem; margin-top: 1.5rem; color: #E07A55;">
+                <strong>ES34 2100 3252 4822 0019 3489</strong>
+            </p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Anne &amp; Pablo – Wir freuen uns auf euch!</p>
+    </footer>
+</body>
+</html>
 
