@@ -73,77 +73,74 @@
         .container {
             max-width: 1200px;
             margin: 0 auto;
-            padding: 3rem 1.5rem;
+            padding: 2.2rem 1.5rem;
         }
 
-        .intro {
-            background: #ffffff;
-            padding: 1.8rem;
-            border-radius: 10px;
-            margin-bottom: 2.5rem;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-        }
-
-        .intro h2 {
-            color: #E07A55;
-            margin-bottom: 1rem;
-            font-size: 2rem;
-            font-weight: 500;
-        }
-
-        .day-section {
+        /* Boxes generales más pequeñas */
+        .day-section,
+        .info-final {
             background: #ffffff;
             border-radius: 10px;
-            padding: 2.2rem;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+            padding: 1.4rem 1.6rem;
+            margin-bottom: 1.4rem;
+            box-shadow: 0 3px 5px rgba(0,0,0,0.06);
         }
 
-        /* Sábado en verde pistacho suave */
+        /* Sábado un poco más grande */
         .day-section.sabado {
             background: #D1E3CE;
+            padding: 1.8rem 1.8rem;
+            margin-bottom: 1.8rem;
         }
 
+        /* Encabezados de día SIN fondo turquesa, texto teja */
         .day-header {
-            background: linear-gradient(135deg, #06b6d4 0%, #10b981 100%);
-            color: white;
-            padding: 1.2rem 1.5rem;
-            border-radius: 10px;
-            margin-bottom: 1.8rem;
-            text-align: center;
+            background: transparent;
+            color: #C86340;
+            padding: 0 0 0.4rem 0;
+            border-radius: 0;
+            margin-bottom: 0.8rem;
+            text-align: left;
+            border-bottom: 1px solid #ead3ca;
         }
 
         .day-header h2 {
-            font-size: 1.8rem;
-            margin-bottom: 0.4rem;
-            font-weight: 500;
+            font-size: 1.2rem;
+            margin-bottom: 0.1rem;
+            font-weight: 600;
         }
 
         .day-header .date {
-            font-size: 1rem;
+            font-size: 0.95rem;
             opacity: 0.95;
+        }
+
+        /* Texto teja para horas y títulos */
+        .timeline-time,
+        .timeline-title {
+            color: #C86340;
         }
 
         .timeline {
             position: relative;
-            padding-left: 3rem;
+            padding-left: 2.2rem;
+            margin-top: 0.6rem;
         }
 
         .timeline::before {
             content: '';
             position: absolute;
-            left: 1rem;
+            left: 0.6rem;
             top: 0;
             bottom: 0;
-            width: 3px;
-            background: linear-gradient(to bottom, #06b6d4, #10b981);
+            width: 2px;
+            background: #ead3ca;
         }
 
         .timeline-item {
             position: relative;
-            margin-bottom: 2.2rem;
-            padding-bottom: 1.8rem;
+            margin-bottom: 1.6rem;
+            padding-bottom: 1.2rem;
             border-bottom: 1px solid #e0e0e0;
         }
 
@@ -154,42 +151,40 @@
         .timeline-item::before {
             content: '';
             position: absolute;
-            left: -2.5rem;
-            top: 0.5rem;
-            width: 1.3rem;
-            height: 1.3rem;
+            left: -0.1rem;
+            top: 0.4rem;
+            width: 0.9rem;
+            height: 0.9rem;
             background: white;
-            border: 3px solid #0891b2;
+            border: 2px solid #C86340;
             border-radius: 50%;
-            box-shadow: 0 0 0 4px #e0f2f1;
+            box-shadow: 0 0 0 3px #f2ded6;
         }
 
         .timeline-time {
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             font-weight: 500;
-            color: #0891b2;
-            margin-bottom: 0.4rem;
+            margin-bottom: 0.2rem;
         }
 
         .timeline-title {
-            font-size: 1.5rem;
-            color: #333;
-            margin-bottom: 0.6rem;
+            font-size: 1.2rem;
+            margin-bottom: 0.4rem;
         }
 
         .timeline-description {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
             color: #555;
-            line-height: 1.8;
+            line-height: 1.7;
         }
 
         .highlight-box {
             background: #e0f2f1;
-            padding: 1.2rem;
+            padding: 1rem;
             border-radius: 8px;
             border-left: 4px solid #0891b2;
-            margin-top: 1rem;
-            font-size: 0.9rem;
+            margin-top: 0.8rem;
+            font-size: 0.85rem;
         }
 
         .highlight-box strong {
@@ -197,31 +192,32 @@
         }
 
         .info-final {
-            background: #ffffff;
-            padding: 1.8rem;
-            border-radius: 10px;
-            text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
-            margin-top: 2.5rem;
+            text-align: left;
         }
 
         .info-final h3 {
-            font-size: 1.6rem;
-            color: #E07A55;
-            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            color: #C86340;
+            margin-bottom: 0.6rem;
         }
 
         .info-final p {
-            font-size: 0.95rem;
+            font-size: 0.9rem;
+        }
+
+        .info-final a {
+            color: #667eea;
+            text-decoration: none;
+            font-weight: 600;
         }
 
         footer {
             background: #2c3e50;
             color: white;
             text-align: center;
-            padding: 1.5rem;
-            margin-top: 3rem;
-            font-size: 0.85rem;
+            padding: 1.3rem;
+            margin-top: 2rem;
+            font-size: 0.8rem;
         }
 
         @media (max-width: 768px) {
@@ -233,13 +229,13 @@
                 font-size: 2rem;
             }
             .timeline {
-                padding-left: 2rem;
+                padding-left: 1.8rem;
             }
             .timeline::before {
                 left: 0.5rem;
             }
             .timeline-item::before {
-                left: -1.9rem;
+                left: -0.2rem;
             }
         }
     </style>
@@ -257,20 +253,21 @@
         <a href="hoteles.html">Hoteles recomendados</a>
     </nav>
 
-        <!-- VIERNES -->
+    <div class="container">
+        <!-- VIERNES (box pequeña) -->
         <div class="day-section">
             <div class="day-header">
                 <h2>Viernes 29 de Mayo</h2>
                 <div class="date">Tarde de Bienvenida</div>
             </div>
 
-            <p style="font-size: 1rem;">
+            <p style="font-size: 0.9rem;">
                 Comenzaremos el fin de semana con una ruta de tapas y vinos por Ávila.  
                 Los detalles y horarios se confirmarán más adelante, pero será por la tarde el viernes. 
             </p>
         </div>
 
-        <!-- SÁBADO (verde #D1E3CE) -->
+        <!-- SÁBADO (box más grande, fondo #D1E3CE) -->
         <div class="day-section sabado">
             <div class="day-header">
                 <h2>Sábado 30 de Mayo</h2>
@@ -311,7 +308,7 @@
                     <div class="timeline-description">
                         Música, baile y muchas ganas de celebrar.
                         <div class="highlight-box">
-                            <strong>🍹 Barra libre durante todo el evento</strong><br>
+                            <strong>🍸 Barra libre durante todo el evento</strong><br>
                             Porque la celebración no tiene límites.
                         </div>
                     </div>
@@ -335,27 +332,28 @@
             </div>
         </div>
 
-        <!-- DOMINGO -->
+        <!-- DOMINGO (mismo tamaño que viernes) -->
         <div class="day-section">
             <div class="day-header">
-                <h2>☀️ Domingo 31 de Mayo</h2>
+                <h2>Domingo 31 de Mayo</h2>
                 <div class="date">Despedida</div>
             </div>
 
-            <p style="font-size: 1rem;">
+            <p style="font-size: 0.9rem;">
                 Posiblemente organicemos un tour privado por Ávila, un desayuno conjunto o un pequeño campeonato de pádel.  
                 La hora y los detalles se confirmarán más adelante - podéis dejarnos ideas en los comentarios del formulario.
             </p>
         </div>
 
+        <!-- Información importante (mismo tamaño que viernes/domingo) -->
         <div class="info-final">
-            <h3>📝 Información Importante</h3>
-            <p style="margin-top: 0.8rem; font-size: 0.95rem;">
+            <h3>Información Importante</h3>
+            <p style="margin-top: 0.4rem;">
                 <strong>Confirmaciones:</strong> Por favor, confirmad vuestra asistencia antes del 1 de abril a través del formulario en la web principal.<br><br>
                 <strong>¿Dudas?</strong> No dudéis en contactarnos para cualquier pregunta sobre el programa.
             </p>
-            <p style="font-size: 1.05rem; margin-top: 1.6rem;">
-                <a href="mailto:masiaybella@gmail.com" style="color: #667eea; text-decoration: none; font-weight: 600;">
+            <p style="font-size: 0.95rem; margin-top: 1rem;">
+                <a href="mailto:masiaybella@gmail.com">
                     ✉️ masiaybella@gmail.com
                 </a>
             </p>
