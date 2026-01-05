@@ -4,7 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nuestra Boda</title>
-   <style>
+
+    <!-- Google Fonts: League Script (títulos) y Roboto Flex (texto) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=League+Script&family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500&display=swap" rel="stylesheet">
+    <!-- League Script y Roboto Flex desde Google Fonts [web:41][web:46][web:52] -->
+
+    <style>
         * {
             margin: 0;
             padding: 0;
@@ -12,16 +19,17 @@
         }
 
         body {
-            font-family: 'Georgia', serif;
+            font-family: 'Roboto Flex', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             line-height: 1.6;
             color: #333;
+            font-size: 0.9rem; /* texto un poco más pequeño */
         }
 
         .hero {
             min-height: 100svh; /* mejor que 100vh en móvil */
             background-image: 
                 linear-gradient(rgba(245, 245, 245, 0.70), rgba(245, 245, 245, 0.70)),
-                url('https://anneypablo.es/imagenes/fotoavila.jpg');
+                url('https://anneypablo.es/imagenes/fotoavila.jpg'); /* CAMBIA AQUÍ LA FOTO SI QUIERES OTRA */
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -33,23 +41,31 @@
         }
 
         .hero-content h1 {
-            font-size: 4rem;
-            margin-bottom: 1rem;
-            font-weight: 300;
+            font-family: 'League Script', cursive;
+            font-size: 3.2rem; /* un poco más pequeño que antes */
+            margin-bottom: 0.8rem;
+            font-weight: 400;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
 
         .hero-content p {
-            font-size: 1.5rem;
-            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
             text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+        }
+
+        .fecha {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-top: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
         }
 
         .separador-avila {
             height: 400px;
             background-image: 
                 linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-                url('https://anneypablo.es/imagenes/fotoavila.jpg');
+                url('https://anneypablo.es/imagenes/fotoavila.jpg'); /* misma foto; puedes cambiarla también */
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -69,68 +85,65 @@
         }
 
         .separador-avila h2 {
+            font-family: 'League Script', cursive;
             color: white;
-            font-size: 2.5rem;
+            font-size: 2.2rem;
             margin-bottom: 1rem;
         }
 
         .separador-avila p {
-            font-size: 1.3rem;
+            font-size: 1rem;
             line-height: 1.8;
         }
 
-        .fecha {
-            font-size: 2rem;
-            font-weight: bold;
-            margin-top: 2rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
-        }
-
         section {
-            padding: 4rem 2rem;
+            padding: 3rem 1.5rem;
             max-width: 1200px;
             margin: 0 auto;
         }
 
         h2 {
-            font-size: 2.5rem;
+            font-family: 'League Script', cursive;
+            font-size: 2.3rem;
             text-align: center;
-            margin-bottom: 3rem;
+            margin-bottom: 2.5rem;
             color: #E07A55;
         }
 
         .info-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
+            gap: 1.8rem;
+            margin-top: 1.5rem;
         }
 
         .info-card {
             background: #f8f9fa;
-            padding: 2rem;
+            padding: 1.6rem;
             border-radius: 10px;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0,0,0,0.1);
         }
 
         .info-card h3 {
+            font-family: 'League Script', cursive;
             color: #E07A55;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
+            margin-bottom: 0.8rem;
+            font-size: 1.7rem;
         }
 
         .info-card p {
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
+            font-size: 0.9rem;
         }
 
         .confirmar-btn {
             background: #667eea;
             color: white;
-            padding: 1rem 3rem;
+            padding: 0.8rem 2.4rem;
             border: none;
             border-radius: 50px;
-            font-size: 1.2rem;
+            font-size: 1rem;
             cursor: pointer;
             margin-top: 2rem;
             transition: all 0.3s;
@@ -150,18 +163,22 @@
             background: #2c3e50;
             color: white;
             text-align: center;
-            padding: 2rem;
+            padding: 1.5rem;
+            font-size: 0.85rem;
         }
 
         @media (max-width: 768px) {
             .hero-content h1 {
-                font-size: 2.5rem;
+                font-size: 2.4rem;
             }
             .hero-content p {
-                font-size: 1.2rem;
+                font-size: 1rem;
             }
             .fecha {
-                font-size: 1.5rem;
+                font-size: 1.1rem;
+            }
+            h2 {
+                font-size: 2rem;
             }
         }
     </style>
@@ -184,28 +201,30 @@
                 <p><strong>Hora:</strong> 12:00h</p>
                 <p><strong>Lugar:</strong> Palacio de los Sofraga</p>
                 <p>Ávila</p>
-                 <a href="programa.html" style="color: #E07A55; text-decoration: none; font-weight: bold;">
-                Ver todo el programa →
-            </a>
+                <a href="programa.html" style="color: #E07A55; text-decoration: none; font-weight: 500; font-size: 0.9rem;">
+                    Ver todo el programa →
+                </a>
             </div>
-        <div class="info-card">
-            <h3>🏨 Alojamiento</h3>
-            <p>Hemos seleccionado hoteles especiales en Ávila</p>
-            <a href="hoteles.html" style="color: #E07A55; text-decoration: none; font-weight: bold;">
-                Ver hoteles recomendados →
-            </a>
-        </div>
+
+            <div class="info-card">
+                <h3>🏨 Alojamiento</h3>
+                <p>Hemos seleccionado hoteles especiales en Ávila</p>
+                <a href="hoteles.html" style="color: #E07A55; text-decoration: none; font-weight: 500; font-size: 0.9rem;">
+                    Ver hoteles recomendados →
+                </a>
+            </div>
+
             <div class="info-card">
                 <h3>📍 Cómo Llegar</h3>
                 <p><strong>Palacio de los Sofraga, Ávila</strong></p>
                 <p>Desde Madrid en coche opción de ruta con o sin peaje / Opción de tren regional o media distancia</p>
                 <p style="margin-top: 1rem;">
-                    <a href="https://maps.google.com/?q=Palacio+de+los+Sofraga+Ávila" target="_blank" style="color: #667eea; text-decoration: none;">
+                    <a href="https://maps.google.com/?q=Palacio+de+los+Sofraga+Ávila" target="_blank" style="color: #667eea; text-decoration: none; font-size: 0.9rem;">
                         🗺️ Ver en Google Maps
                     </a>
                 </p>
-<p><strong>Aparcar coche:</strong></p>
-<p>Recomendamos aparcar fuera de la muralla - "La Puerta de San Vicente" es la mejor ubicada.</p>
+                <p><strong>Aparcar coche:</strong></p>
+                <p>Recomendamos aparcar fuera de la muralla - "La Puerta de San Vicente" es la mejor ubicada.</p>
             </div>
 
             <div class="info-card">
@@ -215,183 +234,178 @@
                 <p>Recomendamos calzado cómodo: no habrá alpargatas ni protectores de tacones y las calles de Ávila son de adoquines. En el Palacio Sofraga habrá servicio de ropero.</p>
             </div>
             
- <div class="info-card">
+            <div class="info-card">
                 <h3>🍾 Menú</h3>
                 <p>Al confirmar vuestra asistencia más abajo, podréis seleccionar el plato principal. Para menús especiales, alergias o intolerancias, por favor utilizad el apartado de comentarios.</p>
             </div>
         </div>
-        
     </section>
 
-   <section style="background: #f8f9fa; padding: 3rem 1rem;">
-    <h2 style="text-align: center; font-size: 2rem; margin-bottom: 1rem;">Nos encantaría contar con vuestra presencia</h2>
+    <section style="background: #f8f9fa; padding: 3rem 1rem;">
+        <h2 style="text-align: center; font-size: 2rem; margin-bottom: 1rem;">Nos encantaría contar con vuestra presencia</h2>
 
-    <div class="center" style="max-width: 700px; margin: 0 auto;">
-        <p style="font-size: 1.2rem; margin-bottom: 2rem; text-align: center;">
-            Por favor, confírmanos tu asistencia antes del <strong>1 de abril</strong>. Nos ayudará mucho con la organización.
-        </p>
-        
-        <form id="confirmacionForm" 
-              action="https://formspree.io/f/xkgdzyao" 
-              method="POST" 
-              style="text-align: left;">
+        <div class="center" style="max-width: 700px; margin: 0 auto;">
+            <p style="font-size: 1rem; margin-bottom: 2rem; text-align: center;">
+                Por favor, confírmanos tu asistencia antes del <strong>1 de abril</strong>. Nos ayudará mucho con la organización.
+            </p>
+            
+            <form id="confirmacionForm" 
+                  action="https://formspree.io/f/xkgdzyao" 
+                  method="POST" 
+                  style="text-align: left; font-size: 0.9rem;">
 
-            <!-- NOMBRE -->
-            <div style="margin-bottom: 1.5rem;">
-                <label for="nombre" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">
-                    Nombre completo *
-                </label>
-                <input type="text" id="nombre" name="nombre" required
-                       style="width: 100%; padding: 0.8rem; border: 2px solid #ddd; 
-                              border-radius: 5px; font-size: 1rem;">
-            </div>
-
-            <!-- ASISTENCIA -->
-            <div style="margin-bottom: 1.5rem;">
-                <label for="asistencia" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">
-                    ¿Confirmas tu asistencia? *
-                </label>
-                <select id="asistencia" name="asistencia" required
-                        style="width: 100%; padding: 0.8rem; border: 2px solid #ddd; 
-                               border-radius: 5px; font-size: 1rem;">
-                    <option value="">Selecciona una opción</option>
-                    <option value="si">Sí, asistiré</option>
-                    <option value="no">No podré asistir</option>
-                    <option value="nolose">No lo sé todavía</option>
-                </select>
-            </div>
-
-            <!-- SECCIÓN QUE APARECE SOLO SI ASISTE -->
-            <div id="detallesAsistencia" style="display: none;">
-
-                <!-- DÍA -->
-                <div style="margin-bottom: 1.5rem;">
-                    <label for="dia" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">
-                        ¿Cuántos días te quedarás en Ávila? *
+                <!-- NOMBRE -->
+                <div style="margin-bottom: 1.2rem;">
+                    <label for="nombre" style="display: block; margin-bottom: 0.4rem; font-weight: 600;">
+                        Nombre completo *
                     </label>
-                    <select id="dia" name="dia"
-                            style="width: 100%; padding: 0.8rem; border: 2px solid #ddd; 
-                                   border-radius: 5px; font-size: 1rem;">
+                    <input type="text" id="nombre" name="nombre" required
+                           style="width: 100%; padding: 0.6rem; border: 2px solid #ddd; 
+                                  border-radius: 5px; font-size: 0.9rem;">
+                </div>
+
+                <!-- ASISTENCIA -->
+                <div style="margin-bottom: 1.2rem;">
+                    <label for="asistencia" style="display: block; margin-bottom: 0.4rem; font-weight: 600;">
+                        ¿Confirmas tu asistencia? *
+                    </label>
+                    <select id="asistencia" name="asistencia" required
+                            style="width: 100%; padding: 0.6rem; border: 2px solid #ddd; 
+                                   border-radius: 5px; font-size: 0.9rem;">
                         <option value="">Selecciona una opción</option>
-                        <option value="viernes a domingo">llego el viernes y me voy el domingo</option>
-                        <option value="sabado a domingo">llego el sábado y me voy el domingo</option>
-                        <option value="solo sabado boda">sólo el sábado y sin alojarme</option>
-                        <option value="Nose">no lo se aún</option>
+                        <option value="si">Sí, asistiré</option>
+                        <option value="no">No podré asistir</option>
+                        <option value="nolose">No lo sé todavía</option>
                     </select>
                 </div>
 
-                <!-- ALOJAMIENTO -->
-                <div style="margin-bottom: 1.5rem;">
-                    <label for="alojamiento" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">
-                        ¿Dónde te alojas? *
-                    </label>
-                    <select id="alojamiento" name="alojamiento"
-                            style="width: 100%; padding: 0.8rem; border: 2px solid #ddd; 
-                                   border-radius: 5px; font-size: 1rem;">
-                        <option value="">Selecciona una opción</option>
-                        <option value="sofraga">Palacio de los Sofraga (boda)</option>
-                        <option value="velada">Palacio de los Velada</option>
-                        <option value="presidente">La Casa del Presidente</option>
-                        <option value="valderrabanos">Palacio de Valderábanos</option>
-                        <option value="otro">Otro alojamiento</option>
-                        <option value="sin-alojamiento">Aún no tengo alojamiento</option>
-                        <option value="no-duermo">No me quedo a dormir</option>
-                        <option value="no-sabemos">Aún no sabemos</option>
-                    </select>
+                <!-- SECCIÓN QUE APARECE SOLO SI ASISTE -->
+                <div id="detallesAsistencia" style="display: none;">
+
+                    <!-- DÍA -->
+                    <div style="margin-bottom: 1.2rem;">
+                        <label for="dia" style="display: block; margin-bottom: 0.4rem; font-weight: 600;">
+                            ¿Cuántos días te quedarás en Ávila? *
+                        </label>
+                        <select id="dia" name="dia"
+                                style="width: 100%; padding: 0.6rem; border: 2px solid #ddd; 
+                                       border-radius: 5px; font-size: 0.9rem;">
+                            <option value="">Selecciona una opción</option>
+                            <option value="viernes a domingo">llego el viernes y me voy el domingo</option>
+                            <option value="sabado a domingo">llego el sábado y me voy el domingo</option>
+                            <option value="solo sabado boda">sólo el sábado y sin alojarme</option>
+                            <option value="Nose">no lo se aún</option>
+                        </select>
+                    </div>
+
+                    <!-- ALOJAMIENTO -->
+                    <div style="margin-bottom: 1.2rem;">
+                        <label for="alojamiento" style="display: block; margin-bottom: 0.4rem; font-weight: 600;">
+                            ¿Dónde te alojas? *
+                        </label>
+                        <select id="alojamiento" name="alojamiento"
+                                style="width: 100%; padding: 0.6rem; border: 2px solid #ddd; 
+                                       border-radius: 5px; font-size: 0.9rem;">
+                            <option value="">Selecciona una opción</option>
+                            <option value="sofraga">Palacio de los Sofraga (boda)</option>
+                            <option value="velada">Palacio de los Velada</option>
+                            <option value="presidente">La Casa del Presidente</option>
+                            <option value="valderrabanos">Palacio de Valderábanos</option>
+                            <option value="otro">Otro alojamiento</option>
+                            <option value="sin-alojamiento">Aún no tengo alojamiento</option>
+                            <option value="no-duermo">No me quedo a dormir</option>
+                            <option value="no-sabemos">Aún no sabemos</option>
+                        </select>
+                    </div>
+
+                    <!-- MENÚ -->
+                    <div style="margin-bottom: 1.2rem;">
+                        <label for="menu" style="display: block; margin-bottom: 0.4rem; font-weight: 600;">
+                            Preferencia de menú *
+                        </label>
+                        <select id="menu" name="menu"
+                                style="width: 100%; padding: 0.6rem; border: 2px solid #ddd; 
+                                       border-radius: 5px; font-size: 0.9rem;">
+                            <option value="">Selecciona una opción de plato principal</option>
+                            <option value="carne">Carne: Solomillo de ternera Avileña con salsa de foie</option>
+                            <option value="pescado">Pescado: Rodaballo con emulsión de sus pieles y aire de Champagne</option>
+                            <option value="esperar">no lo se aún</option>
+                        </select>
+                    </div>
+
+                    <!-- EMAIL -->
+                    <div style="margin-bottom: 1.2rem;">
+                        <label for="email" style="display: block; margin-bottom: 0.4rem; font-weight: 600;">
+                            Correo electrónico *
+                        </label>
+                        <input type="text" id="email" name="email" required
+                               style="width: 100%; padding: 0.6rem; border: 2px solid #ddd; 
+                                      border-radius: 5px; font-size: 0.9rem;">
+                    </div>
+                    
+                    <!-- COMENTARIOS -->
+                    <div style="margin-bottom: 1.2rem;">
+                        <label for="comentarios" style="display: block; margin-bottom: 0.4rem; font-weight: 600;">
+                            Comentarios adicionales
+                        </label>
+                        <textarea id="comentarios" name="comentarios" rows="4"
+                                  style="width: 100%; padding: 0.6rem; border: 2px solid #ddd;
+                                         border-radius: 5px; font-size: 0.9rem;"
+                                  placeholder="Alergias, intolerancias, preferencias, necesidades especiales, etc."></textarea>
+                    </div>
                 </div>
 
-                <!-- MENÚ -->
-                <div style="margin-bottom: 1.5rem;">
-                    <label for="menu" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">
-                        Preferencia de menú *
-                    </label>
-                    <select id="menu" name="menu"
-                            style="width: 100%; padding: 0.8rem; border: 2px solid #ddd; 
-                                   border-radius: 5px; font-size: 1rem;">
-                        <option value="">Selecciona una opción de plato principal</option>
-                        <option value="carne">Carne: Solomillo de ternera Avileña con salsa de foie</option>
-                        <option value="pescado">Pescado: Rodaballo con emulsión de sus pieles y aire de Champagne</option>
-                        <option value="esperar">no lo se aún</option>
-                    </select>
+                <!-- BOTÓN -->
+                <div style="text-align: center;">
+                    <button type="submit"
+                            style="background: #C86340; color: white; padding: 0.8rem 1.8rem;
+                                   border-radius: 40px; border: none; font-size: 1rem; 
+                                   cursor: pointer; transition: 0.3s;">
+                        Enviar Confirmación
+                    </button>
                 </div>
+            </form>
 
-
-                 <!-- EMAIL -->
-                <div style="margin-bottom: 1.5rem;">
-                    <label for="email" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">
-                        Correo electrónico *
-                    </label>
-                <input type="text" id="email" name="email" required
-                       style="width: 100%; padding: 0.8rem; border: 2px solid #ddd; 
-                              border-radius: 5px; font-size: 1rem;">
-                </div>
-                
-                
-                <!-- COMENTARIOS -->
-                <div style="margin-bottom: 1.5rem;">
-                    <label for="comentarios" style="display: block; margin-bottom: 0.5rem; font-weight: bold;">
-                        Comentarios adicionales
-                    </label>
-                    <textarea id="comentarios" name="comentarios" rows="4"
-                              style="width: 100%; padding: 0.8rem; border: 2px solid #ddd;
-                                     border-radius: 5px; font-size: 1rem;"
-                              placeholder="Alergias, intolerancias, preferencias, necesidades especiales, etc."></textarea>
-                </div>
+            <!-- MENSAJE DE ÉXITO -->
+            <div id="mensajeExito" 
+                 style="display: none; margin-top: 2rem; padding: 1.2rem; background: #d4edda; 
+                        border: 2px solid #28a745; border-radius: 5px; color: #155724; font-size: 0.9rem;">
+                <strong>✓ ¡Confirmación enviada!</strong><br>
+                Gracias por confirmar tu asistencia ¡Nos vemos el 30 de mayo! Con cariño, Anne & Pablo.
             </div>
-
-            <!-- BOTÓN -->
-            <div style="text-align: center;">
-                <button type="submit"
-                        style="background: #C86340; color: white; padding: 1rem 2rem;
-                               border-radius: 40px; border: none; font-size: 1.1rem; 
-                               cursor: pointer; transition: 0.3s;">
-                    Enviar Confirmación
-                </button>
-            </div>
-        </form>
-
-        <!-- MENSAJE DE ÉXITO -->
-        <div id="mensajeExito" 
-             style="display: none; margin-top: 2rem; padding: 1.5rem; background: #d4edda; 
-                    border: 2px solid #28a745; border-radius: 5px; color: #155724;">
-            <strong>✓ ¡Confirmación enviada!</strong><br>
-            Gracias por confirmar tu asistencia ¡Nos vemos el 30 de mayo! Con cariño, Anne & Pablo.
         </div>
-    </div>
-</section>
+    </section>
   
+    <script>
+        // Mostrar u ocultar detalles si responde "Sí"
+        document.getElementById("asistencia").addEventListener("change", function() {
+            const detalles = document.getElementById("detallesAsistencia");
+            if (this.value === "si") {
+                detalles.style.display = "block";
+            } else {
+                detalles.style.display = "none";
+            }
+        });
 
-<script>
-    // Mostrar u ocultar detalles si responde "Sí"
-    document.getElementById("asistencia").addEventListener("change", function() {
-        const detalles = document.getElementById("detallesAsistencia");
-        if (this.value === "si") {
-            detalles.style.display = "block";
-        } else {
-            detalles.style.display = "none";
-        }
-    });
+        // Mostrar mensaje de éxito tras enviar
+        document.getElementById("confirmacionForm").addEventListener("submit", function() {
+            document.getElementById("mensajeExito").style.display = "block";
+        });
+    </script>
 
-    // Mostrar mensaje de éxito tras enviar
-    document.getElementById("confirmacionForm").addEventListener("submit", function() {
-        document.getElementById("mensajeExito").style.display = "block";
-    });
-</script>
-
-<section>
+    <section>
         <h2>¿Nos ayudas?</h2>
         <div class="center">
-            <p style="font-size: 1.2rem;">
+            <p style="font-size: 1rem;">
                 Vuestra presencia es nuestro mejor regalo.<br>
                 Si deseáis tener un detalle con nosotros,<br>
                 os dejamos nuestro número de cuenta:
             </p>
-            <p style="font-size: 1.5rem; margin-top: 2rem; color: #E07A55;">
+            <p style="font-size: 1.3rem; margin-top: 1.5rem; color: #E07A55;">
                 <strong>ES34 2100 3252 4822 0019 3489</strong>
             </p>
         </div>
     </section>
-
 
     <footer>
         <p>&copy; 2026 Anne & Pablo - ¡Os esperamos!</p>
@@ -414,8 +428,6 @@
                 alojamiento.required = false;
             }
         });
-
-
     </script>
 </body>
 </html>
