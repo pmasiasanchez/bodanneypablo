@@ -4,6 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programa del Evento - Boda Anne & Pablo</title>
+
+    <!-- Google Fonts: Roboto Flex -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500&display=swap" rel="stylesheet">
+
     <style>
         * {
             margin: 0;
@@ -12,40 +18,52 @@
         }
 
         body {
-            font-family: 'Georgia', serif;
+            font-family: 'Roboto Flex', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             line-height: 1.6;
             color: #333;
             background: #f8f9fa;
+            font-size: 0.9rem;
         }
 
-        header {
-            background: linear-gradient(135deg, #06b6d4 0%, #10b981 100%);
-            color: white;
-            padding: 3rem 2rem;
+        .hero {
+            min-height: 40vh;
+            background-image:
+                linear-gradient(rgba(245, 245, 245, 0.85), rgba(245, 245, 245, 0.85)),
+                url('https://anneypablo.es/imagenes/avila2.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             text-align: center;
+            color: #C86340;
+            padding: 2.5rem 1.5rem;
         }
 
-        header h1 {
-            font-size: 2.5rem;
+        .hero h1 {
+            font-size: 2.4rem;
             margin-bottom: 0.5rem;
+            font-weight: 500;
         }
 
-        header p {
-            font-size: 1.2rem;
+        .hero p {
+            font-size: 1rem;
         }
 
         nav {
             background: white;
             padding: 1rem 2rem;
             text-align: center;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
         }
 
         nav a {
-            color: #0891b2;
+            color: #E07A55;
             text-decoration: none;
             margin: 0 1rem;
-            font-weight: bold;
+            font-weight: 500;
+            font-size: 0.95rem;
         }
 
         nav a:hover {
@@ -54,34 +72,35 @@
 
         .container {
             max-width: 1200px;
-            margin: 3rem auto;
-            padding: 0 2rem;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
         }
 
         .intro {
-            background: white;
-            padding: 2rem;
+            background: #ffffff;
+            padding: 1.8rem;
             border-radius: 10px;
-            margin-bottom: 3rem;
+            margin-bottom: 2.5rem;
             text-align: center;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
         }
 
         .intro h2 {
-            color: #0891b2;
+            color: #E07A55;
             margin-bottom: 1rem;
             font-size: 2rem;
+            font-weight: 500;
         }
 
         .day-section {
-            background: white;
+            background: #ffffff;
             border-radius: 10px;
-            padding: 2.5rem;
+            padding: 2.2rem;
             margin-bottom: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.08);
         }
 
-        /* Caja del sábado en verde pistacho suave */
+        /* Sábado en verde pistacho suave */
         .day-section.sabado {
             background: #D1E3CE;
         }
@@ -89,20 +108,21 @@
         .day-header {
             background: linear-gradient(135deg, #06b6d4 0%, #10b981 100%);
             color: white;
-            padding: 1.5rem;
+            padding: 1.2rem 1.5rem;
             border-radius: 10px;
-            margin-bottom: 2rem;
+            margin-bottom: 1.8rem;
             text-align: center;
         }
 
         .day-header h2 {
-            font-size: 2rem;
-            margin-bottom: 0.5rem;
+            font-size: 1.8rem;
+            margin-bottom: 0.4rem;
+            font-weight: 500;
         }
 
         .day-header .date {
-            font-size: 1.2rem;
-            opacity: 0.9;
+            font-size: 1rem;
+            opacity: 0.95;
         }
 
         .timeline {
@@ -122,8 +142,8 @@
 
         .timeline-item {
             position: relative;
-            margin-bottom: 2.5rem;
-            padding-bottom: 2rem;
+            margin-bottom: 2.2rem;
+            padding-bottom: 1.8rem;
             border-bottom: 1px solid #e0e0e0;
         }
 
@@ -136,8 +156,8 @@
             position: absolute;
             left: -2.5rem;
             top: 0.5rem;
-            width: 1.5rem;
-            height: 1.5rem;
+            width: 1.3rem;
+            height: 1.3rem;
             background: white;
             border: 3px solid #0891b2;
             border-radius: 50%;
@@ -145,57 +165,79 @@
         }
 
         .timeline-time {
-            font-size: 1.5rem;
-            font-weight: bold;
+            font-size: 1.3rem;
+            font-weight: 500;
             color: #0891b2;
-            margin-bottom: 0.5rem;
+            margin-bottom: 0.4rem;
         }
 
         .timeline-title {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             color: #333;
-            margin-bottom: 0.8rem;
+            margin-bottom: 0.6rem;
         }
 
         .timeline-description {
-            font-size: 1.1rem;
-            color: #666;
+            font-size: 0.95rem;
+            color: #555;
             line-height: 1.8;
         }
 
         .highlight-box {
             background: #e0f2f1;
-            padding: 1.5rem;
+            padding: 1.2rem;
             border-radius: 8px;
             border-left: 4px solid #0891b2;
             margin-top: 1rem;
+            font-size: 0.9rem;
         }
 
         .highlight-box strong {
             color: #0891b2;
         }
 
+        .info-final {
+            background: #ffffff;
+            padding: 1.8rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-top: 2.5rem;
+        }
+
+        .info-final h3 {
+            font-size: 1.6rem;
+            color: #E07A55;
+            margin-bottom: 1rem;
+        }
+
+        .info-final p {
+            font-size: 0.95rem;
+        }
+
         footer {
             background: #2c3e50;
             color: white;
             text-align: center;
-            padding: 2rem;
+            padding: 1.5rem;
             margin-top: 3rem;
+            font-size: 0.85rem;
         }
 
         @media (max-width: 768px) {
-            header h1 {
+            .hero {
+                min-height: auto;
+                padding: 2rem 1rem;
+            }
+            .hero h1 {
                 font-size: 2rem;
             }
-            
             .timeline {
                 padding-left: 2rem;
             }
-            
             .timeline::before {
                 left: 0.5rem;
             }
-            
             .timeline-item::before {
                 left: -1.9rem;
             }
@@ -203,19 +245,22 @@
     </style>
 </head>
 <body>
-    <header>
-        <h1>📅 Programa del Evento</h1>
-    </header>
+    <div class="hero">
+        <div>
+            <h1>📅 Programa del Evento</h1>
+            <p>Un fin de semana para celebrar juntos en Ávila</p>
+        </div>
+    </div>
 
     <nav>
-        <a href="index.html">← Volver a la Web Principal</a>
-        <a href="hoteles.html">Hoteles Recomendados</a>
+        <a href="index.html">← Volver a la web principal</a>
+        <a href="hoteles.html">Hoteles recomendados</a>
     </nav>
 
     <div class="container">
         <div class="intro">
             <h2>¡Un fin de semana inolvidable en Ávila!</h2>
-            <p style="font-size: 1.2rem; margin-top: 1rem;">
+            <p style="font-size: 1.1rem; margin-top: 0.8rem;">
                 Hemos preparado tres días llenos de celebración, tapas y diversión.<br>
                 Aquí encontraréis todos los detalles del programa.
             </p>
@@ -228,13 +273,13 @@
                 <div class="date">Noche de Bienvenida</div>
             </div>
 
-            <p style="font-size: 1.1rem;">
+            <p style="font-size: 1rem;">
                 Comenzaremos el fin de semana con una ruta de tapas y vinos por Ávila.  
                 Los detalles y horarios se confirmarán más adelante.
             </p>
         </div>
 
-        <!-- SÁBADO (caja verde) -->
+        <!-- SÁBADO (verde #D1E3CE) -->
         <div class="day-section sabado">
             <div class="day-header">
                 <h2>💒 Sábado 30 de Mayo</h2>
@@ -306,21 +351,21 @@
                 <div class="date">Despedida</div>
             </div>
 
-            <p style="font-size: 1.1rem;">
+            <p style="font-size: 1rem;">
                 Posiblemente organicemos un tour privado por Ávila, un desayuno conjunto o un pequeño campeonato de pádel.  
                 La hora y los detalles se confirmarán más adelante - podéis dejarnos ideas en los comentarios del formulario.
             </p>
         </div>
 
-        <div class="intro" style="margin-top: 3rem;">
+        <div class="info-final">
             <h3>📝 Información Importante</h3>
-            <p style="margin-top: 1rem; font-size: 1.1rem;">
+            <p style="margin-top: 0.8rem; font-size: 0.95rem;">
                 <strong>Confirmaciones:</strong> Por favor, confirmad vuestra asistencia antes del 1 de abril a través del formulario en la web principal.<br><br>
                 <strong>¿Dudas?</strong> No dudéis en contactarnos para cualquier pregunta sobre el programa.
             </p>
-            <p style="font-size: 1.2rem; margin-top: 2rem;">
-                <a href="mailto:masiaybella@gmail.com" style="color: #667eea; text-decoration: none; font-weight: bold; font-size: 1.3rem;">
-                    ✉️ [masiaybella@gmail.com](mailto:masiaybella@gmail.com)
+            <p style="font-size: 1.05rem; margin-top: 1.6rem;">
+                <a href="mailto:masiaybella@gmail.com" style="color: #667eea; text-decoration: none; font-weight: 600;">
+                    ✉️ masiaybella@gmail.com
                 </a>
             </p>
         </div>
