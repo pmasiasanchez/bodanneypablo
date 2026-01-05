@@ -1,1 +1,351 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Empfohlene Hotels – Hochzeit Anne & Pablo</title>
+
+    <!-- Google Fonts: Roboto Flex -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz,wght@8..144,300;8..144,400;8..144,500&display=swap" rel="stylesheet">
+
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        body {
+            font-family: 'Roboto Flex', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            line-height: 1.6;
+            color: #333;
+            font-size: 0.9rem;
+            background: #f8f9fa;
+        }
+
+        /* Selector idioma */
+        .language-switch {
+            position: fixed;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(255,255,255,0.9);
+            padding: 0.4rem 0.8rem;
+            border-radius: 999px;
+            font-size: 0.8rem;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            z-index: 1000;
+        }
+        .language-switch a {
+            color: #C86340;
+            text-decoration: none;
+            margin: 0 0.2rem;
+            font-weight: 500;
+        }
+        .language-switch span { font-weight: 600; }
+
+        .hero {
+            min-height: 40vh;
+            background-image:
+                linear-gradient(rgba(245, 245, 245, 0.85), rgba(245, 245, 245, 0.85)),
+                url('https://anneypablo.es/imagenes/avila2.png');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #C86340;
+            padding: 2.5rem 1.5rem;
+        }
+
+        .hero h1 {
+            font-size: 2.4rem;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+
+        .hero p { font-size: 1rem; }
+
+        nav {
+            background: white;
+            padding: 1rem 2rem;
+            text-align: center;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        }
+
+        nav a {
+            color: #E07A55;
+            text-decoration: none;
+            margin: 0 1rem;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+        nav a:hover { text-decoration: underline; }
+
+        section {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 3rem 1.5rem;
+        }
+
+        h2 {
+            font-size: 2rem;
+            text-align: center;
+            margin-bottom: 2rem;
+            color: #E07A55;
+            font-weight: 500;
+        }
+
+        h3 {
+            font-size: 1.6rem;
+            margin-bottom: 1rem;
+            color: #E07A55;
+        }
+
+        .intro,
+        .info-extra {
+            background: #ffffff;
+            padding: 1.8rem;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 2.5rem;
+        }
+
+        .info-grid-hoteles {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.8rem;
+        }
+
+        .hotel-card {
+            background: #ffffff;
+            border-radius: 10px;
+            padding: 1.8rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .hotel-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 6px 12px rgba(0,0,0,0.12);
+        }
+
+        .hotel-card h2 {
+            font-size: 1.6rem;
+            color: #E07A55;
+            margin-bottom: 0.5rem;
+        }
+
+        .estrellas {
+            color: #f39c12;
+            margin-bottom: 0.8rem;
+            font-size: 1rem;
+        }
+
+        .hotel-card p {
+            margin-bottom: 0.7rem;
+            font-size: 0.9rem;
+        }
+
+        .hotel-card .destacado {
+            background: #FFF7E6;
+            padding: 1rem;
+            border-radius: 6px;
+            margin: 1rem 0;
+            border-left: 4px solid #f39c12;
+            font-size: 0.9rem;
+        }
+
+        .bloque-tarifas {
+            background: #FFF9E6;
+            padding: 1.2rem;
+            border-radius: 6px;
+            margin: 1.2rem 0;
+            border-left: 4px solid #f39c12;
+            font-size: 0.9rem;
+        }
+
+        .bloque-descuento {
+            background: #E8F8F5;
+            padding: 1.2rem;
+            border-radius: 6px;
+            margin-top: 1.2rem;
+            border-left: 4px solid #1abc9c;
+            font-size: 0.9rem;
+        }
+
+        .codigo-descuento {
+            background: white;
+            padding: 0.7rem 1rem;
+            border-radius: 4px;
+            font-size: 1rem;
+            border: 1px dashed #1abc9c;
+            text-align: center;
+            margin-top: 0.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background: #C86340;
+            color: white;
+            padding: 0.7rem 1.6rem;
+            border-radius: 40px;
+            text-decoration: none;
+            margin-top: 0.7rem;
+            font-size: 0.9rem;
+            transition: all 0.3s;
+        }
+        .btn:hover {
+            background: #a44e30;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 1.5rem;
+            margin-top: 3rem;
+            font-size: 0.85rem;
+        }
+
+        @media (max-width: 768px) {
+            .hero { min-height: auto; padding: 2rem 1rem; }
+            .hero h1 { font-size: 2rem; }
+            h2 { font-size: 1.8rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="language-switch">
+        <a href="hoteles.html">ES</a> | <span>DE</span>
+    </div>
+
+    <div class="hero">
+        <div>
+            <h1>Empfohlene Hotels</h1>
+            <p>Wir haben für euch in diesen vier Hotels in Ávila Sonderkonditionen vereinbart.</p>
+        </div>
+    </div>
+
+    <nav>
+        <a href="index-de.html">← Zurück zur Hauptseite</a>
+    </nav>
+
+    <section>
+        <div class="info-grid-hoteles">
+            <!-- Hotel 1 -->
+            <div class="hotel-card">
+                <h2>Palacio de los Sofraga</h2>
+                
+                <div class="destacado">
+                    <strong>💍 Hier findet unsere Hochzeit statt!</strong>
+                </div>
+
+                <p><strong>📍 Lage:</strong> Teil der Stadtmauer von Ávila – 4 Gehminuten von der Kathedrale entfernt.</p>
+                <p><strong>Am besten bucht ihr direkt telefonisch – dort kann man euch je nach Bedarf (Parkplatz, Zustellbett usw.) ein individuelles Angebot machen.</strong></p>
+
+                <div class="bloque-tarifas">
+                    <strong style="font-size: 1rem; color: #f39c12;">💰 Sonderpreise für unsere Hochzeit:</strong>
+                    <ul style="margin-top: 0.8rem; line-height: 1.8; padding-left: 1.2rem;">
+                        <li><strong>Doppelzimmer Superior Samstag–Sonntag: 150 €</strong></li>
+                        <li><strong>Doppelzimmer Superior Freitag–Sonntag: 272 €</strong></li>
+                        <li><strong>King Premium:</strong> 340 €</li>
+                    </ul>
+                </div>
+
+                <div class="bloque-descuento">
+                    <strong style="font-size: 1rem; color: #1abc9c;">🎟️ 20 % Rabatt</strong>
+                    <p style="margin-top: 0.6rem;">
+                        Wenn ihr telefonisch bucht und erwähnt, dass ihr zu unserer Hochzeit kommt,
+                        erhaltet ihr <strong>20 % Rabatt</strong>.
+                    </p>
+                    <a href="https://www.sofragapalacio.com/" target="_blank" class="btn">Zur Hotel-Webseite</a>
+                    <a href="tel:+34920254080" class="btn">📞 Anrufen: +34 920 254 080</a>
+                </div>
+            </div>
+
+            <!-- Hotel 2 -->
+            <div class="hotel-card">
+                <h2>Palacio de Valderrábanos</h2>
+                
+                <p><strong>📍 Lage:</strong> Plaza de la Catedral – ca. 2 Minuten zu Fuß.</p>
+                <div class="bloque-tarifas">
+                    <strong style="font-size: 1rem; color: #f39c12;">💰 Sonderpreise für unsere Hochzeit:</strong>
+                    <ul style="margin-top: 0.8rem; line-height: 1.8; padding-left: 1.2rem;">
+                        <li><strong>Ab 114 € für ein Economy-Doppelzimmer (Innenhof)</strong></li>
+                        <li><strong>Ab 157 € für eine Suite</strong></li>
+                    </ul>
+                </div>
+
+                <div class="bloque-descuento">
+                    <strong style="font-size: 1rem; color: #1abc9c;">🎟️ 20 %-Rabattcode</strong>
+                    <p style="margin-top: 0.6rem;">
+                        Auf der Hotel-Webseite könnt ihr direkt einen Code eingeben und
+                        erhaltet <strong>20 % Rabatt</strong> auf eure Buchung:
+                    </p>
+                    <div class="codigo-descuento">
+                        <strong>ENLACEPAYANNE</strong>
+                    </div>
+                    <p style="margin-top: 0.6rem; font-size: 0.85rem;">
+                        *Gilt nur für Direktbuchungen über die Hotel-Webseite. Prüft bitte bei der Buchung die Verfügbarkeit.
+                    </p>
+                    <a href="https://www.hotelpalaciovalderrabanos.com/" target="_blank" class="btn">Zur Hotel-Webseite</a>
+                    <a href="tel:+34920211023" class="btn">📞 Anrufen: +34 920 211 023</a>
+                </div>
+            </div>
+
+            <!-- Hotel 3 -->
+            <div class="hotel-card">
+                <h2>Palacio de los Velada</h2>
+                
+                <p><strong>📍 Lage:</strong> Plaza de la Catedral – ca. 2 Minuten zu Fuß.</p>
+
+                <div class="bloque-tarifas">
+                    <strong style="font-size: 1rem; color: #f39c12;">💰 Sonderpreise für unsere Hochzeit:</strong>
+                    <ul style="margin-top: 0.8rem; line-height: 1.8; padding-left: 1.2rem;">
+                        <li><strong>Doppelzimmer: 100 € für die Samstagnacht</strong></li>
+                        <li><strong>120 € für die Freitagnacht</strong></li>
+                    </ul>
+                </div>
+
+                <div class="bloque-descuento">
+                    <strong style="font-size: 1rem; color: #1abc9c;">🎟️ Telefonischer Sondertarif</strong>
+                    <p style="margin-top: 0.6rem;">
+                        Diese Preise gelten nur bei telefonischer Buchung, wenn ihr dazu sagt,
+                        dass ihr zu unserer Hochzeit kommt.
+                    </p>
+                    <a href="https://www.hotelpalaciodelosvelada.com/" target="_blank" class="btn">Zur Hotel-Webseite</a>
+                    <a href="tel:+34920255100" class="btn">📞 Anrufen: +34 920 255 100</a>
+                </div>
+            </div>
+
+            <!-- Hotel 4 -->
+            <div class="hotel-card">
+                <h2>La Casa del Presidente</h2>
+                
+                <div class="destacado">
+                    <strong>Luxuriöses Boutique-Hotel – ehemaliges Wohnhaus von Adolfo Suárez</strong>
+                </div>
+
+                <p><strong>📍 Lage:</strong> Calle Telares 1 – ca. 10 Minuten zu Fuß von der Kathedrale, direkt an der Stadtmauer.</p>
+                <p>5‑Sterne-Boutique-Hotel mit nur 10 exklusiven Zimmern in der früheren Residenz des ersten spanischen Regierungschefs der Demokratie. Das Haus aus den 1970er Jahren war Schauplatz wichtiger Gespräche der spanischen Transition.</p>
+                <p>Dies ist die exklusivste Option. Wenn ihr euch dafür interessiert, gebt uns gern Bescheid – vielleicht können wir euch bei der Buchung unterstützen.</p>
+
+                <a href="https://www.lacasadelpresidente.es/" target="_blank" class="btn">Zur Hotel-Webseite</a>
+                <a href="https://www.booking.com/hotel/es/la-casa-del-presidente.es.html" target="_blank" class="btn">Bei Booking reservieren</a>
+            </div>
+        </div>
+
+        <div class="info-extra">
+            <h3>💡 Nützliche Infos</h3>
+            <p>Wir empfehlen euch, frühzeitig zu reservieren – besonders, wenn ihr am Wochenende der Hochzeit anreist.</p>
+            <p>Wenn ihr weitere Optionen braucht oder Fragen habt, meldet euch einfach bei uns.</p>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Anne &amp; Pablo – Wir sehen uns in Ávila!</p>
+    </footer>
+</body>
+</html>
 
