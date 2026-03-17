@@ -404,8 +404,24 @@
             const detalles = document.getElementById("detallesAsistencia");
             if (this.value === "si") {
                 detalles.style.display = "block";
+                       // Activar required
+                 dia.required = true;
+                alojamiento.required = true;
+                menu.required = true;
+                email.required = true;
             } else {
                 detalles.style.display = "none";
+                        // Desactivar required
+                        dia.required = false;
+                        alojamiento.required = false;
+                        menu.required = false;
+                        email.required = false;
+                
+                        // 🧹 LIMPIAR VALORES (AQUÍ VA)
+                        dia.value = "";
+                        alojamiento.value = "";
+                        menu.value = "";
+                        email.value = "";
             }
         });
 
