@@ -17,36 +17,14 @@
             box-sizing: border-box;
         }
 
- body {
-        font-family: 'Roboto Flex', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-        line-height: 1.6;
-        color: #333;
-        background: #f8f9fa;
-        font-size: 0.9rem;
-    }
+        body {
+            font-family: 'Roboto Flex', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #f8f9fa;
+            font-size: 0.9rem;
+        }
 
-    /* Selector de idioma */
-    .language-switch {
-        position: fixed;
-        top: 1rem;
-        right: 1rem;
-        background: rgba(255,255,255,0.9);
-        padding: 0.4rem 0.8rem;
-        border-radius: 999px;
-        font-size: 0.8rem;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-        z-index: 1000;
-    }
-    .language-switch a {
-        color: #C86340;
-        text-decoration: none;
-        margin: 0 0.2rem;
-        font-weight: 500;
-    }
-    .language-switch span {
-        font-weight: 600;
-    }
-        
         .hero {
             min-height: 40vh;
             background-image:
@@ -98,7 +76,6 @@
             padding: 2.2rem 1.5rem;
         }
 
-        /* Boxes generales más pequeñas */
         .day-section,
         .info-final {
             background: #ffffff;
@@ -108,14 +85,12 @@
             box-shadow: 0 3px 5px rgba(0,0,0,0.06);
         }
 
-        /* Sábado un poco más grande */
         .day-section.sabado {
             background: #D1E3CE;
             padding: 1.8rem 1.8rem;
             margin-bottom: 1.8rem;
         }
 
-        /* Encabezados de día sin fondo, texto teja */
         .day-header {
             background: transparent;
             color: #C86340;
@@ -137,7 +112,6 @@
             opacity: 0.95;
         }
 
-        /* Texto teja para horas y títulos */
         .timeline-time,
         .timeline-title {
             color: #C86340;
@@ -168,14 +142,16 @@
 
         .timeline-item:last-child {
             border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
         }
 
-      .timeline-time {
-    font-size: 1.25rem;
-    font-weight: 600;
-    margin-bottom: 0.25rem;
-    margin-left: 1.6rem;   /* ajusta la alineación con el texto del título */
-}
+        .timeline-time {
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            margin-left: 1.6rem;
+        }
 
         .timeline-title {
             font-size: 1.2rem;
@@ -201,6 +177,16 @@
             color: #0891b2;
         }
 
+        .highlight-box a {
+            color: #0891b2;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .highlight-box a:hover {
+            text-decoration: underline;
+        }
+
         .info-final {
             text-align: left;
         }
@@ -221,6 +207,10 @@
             font-weight: 600;
         }
 
+        .info-final a:hover {
+            text-decoration: underline;
+        }
+
         footer {
             background: #2c3e50;
             color: white;
@@ -235,14 +225,35 @@
                 min-height: auto;
                 padding: 2rem 1rem;
             }
+
             .hero h1 {
                 font-size: 2rem;
             }
+
+            nav {
+                padding: 1rem;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 0.3rem 0.5rem;
+            }
+
+            .container {
+                padding: 1.5rem 1rem;
+            }
+
             .timeline {
                 padding-left: 1.6rem;
             }
+
             .timeline::before {
                 left: 0.25rem;
+            }
+
+            .timeline-time {
+                margin-left: 1.2rem;
+                font-size: 1.1rem;
             }
         }
     </style>
@@ -250,7 +261,7 @@
 <body>
     <div class="hero">
         <div>
-            <h1>Ceremonia y Celebración </h1>
+            <h1>Ceremonia y Celebración</h1>
             <p>Un fin de semana para celebrar juntos en Ávila</p>
         </div>
     </div>
@@ -259,9 +270,9 @@
         <a href="index.html">← Volver a la web principal</a>
         <a href="hoteles.html">Hoteles recomendados</a>
     </nav>
-    
+
     <div class="container">
-        <!-- VIERNES (box pequeña) -->
+        <!-- VIERNES -->
         <div class="day-section">
             <div class="day-header">
                 <h2>Viernes 29 de Mayo</h2>
@@ -269,24 +280,24 @@
             </div>
 
             <p style="font-size: 0.9rem;">
-                Comenzaremos el viernes con unos vinos y pinchos típicos de Ávila.  
+                Comenzaremos el viernes con unos vinos y pinchos típicos de Ávila.
                 Los detalles y horarios se confirmarán más adelante, pero será por la tarde el viernes, sobre las 20:00 horas.
             </p>
-            
-  <strong>📍 Lugar:</strong>
-                            Hotel Restaurante Las Cancelas<br>
-                            <a href="https://maps.app.goo.gl/rP1fkQXrhFpSceKAA;">
-                                Ver en Google Maps
-                            </a>
-                        </div>
-            
+
+            <div class="highlight-box">
+                <strong>📍 Lugar:</strong>
+                Hotel Restaurante Las Cancelas<br>
+                <a href="https://maps.app.goo.gl/rP1fkQXrhFpSceKAA" target="_blank" rel="noopener noreferrer">
+                    Ver en Google Maps
+                </a>
+            </div>
         </div>
 
-        <!-- SÁBADO (box más grande, fondo #D1E3CE) -->
+        <!-- SÁBADO -->
         <div class="day-section sabado">
             <div class="day-header">
                 <h2>Sábado 30 de Mayo</h2>
-                <div class="date">¡nos casamos!</div>
+                <div class="date">¡Nos casamos!</div>
             </div>
 
             <div class="timeline">
@@ -295,10 +306,11 @@
                     <div class="timeline-title">💍 Ceremonia</div>
                     <div class="timeline-description">
                         Ceremonia íntima en el Palacio de los Verdugo, un lugar histórico medieval de Ávila.
+
                         <div class="highlight-box">
                             <strong>📍 Lugar:</strong>
                             Palacio de los Verdugo<br>
-                            <a href="https://maps.app.goo.gl/sebkQFGqSuhZooaR8;">
+                            <a href="https://maps.app.goo.gl/sebkQFGqSuhZooaR8" target="_blank" rel="noopener noreferrer">
                                 Ver en Google Maps
                             </a>
                         </div>
@@ -312,15 +324,15 @@
                         Brindis, aperitivos y fotos en los jardines del Palacio.
                     </div>
 
-                  <div class="highlight-box">
-                            <strong>📍 Lugar:</strong>
-                            Palacio de los Sofraga - Muralla de Ávila<br>
-                            <a href="https://maps.app.goo.gl/AXLBcv9AG2eUZkkW7" target="_blank" style="color:#0891b2; text-decoration:none; font-weight:600;">
-                                Ver en Google Maps
-                            </a>
-                        </div>
+                    <div class="highlight-box">
+                        <strong>📍 Lugar:</strong>
+                        Palacio de los Sofraga - Muralla de Ávila<br>
+                        <a href="https://maps.app.goo.gl/AXLBcv9AG2eUZkkW7" target="_blank" rel="noopener noreferrer">
+                            Ver en Google Maps
+                        </a>
                     </div>
-                      
+                </div>
+
                 <div class="timeline-item">
                     <div class="timeline-time">15:00h</div>
                     <div class="timeline-title">🍽️ Comida</div>
@@ -334,10 +346,6 @@
                     <div class="timeline-title">🎉 Fiesta y Baile</div>
                     <div class="timeline-description">
                         Música, baile y muchas ganas de celebrar.
-                        <div class="highlight-box">
-                            <strong>🍸 Barra libre durante todo el evento</strong><br>
-                            Porque la celebración no tiene límites.
-                        </div>
                     </div>
                 </div>
 
@@ -359,7 +367,7 @@
             </div>
         </div>
 
-        <!-- DOMINGO (mismo tamaño que viernes) -->
+        <!-- DOMINGO -->
         <div class="day-section">
             <div class="day-header">
                 <h2>Domingo 31 de Mayo</h2>
@@ -367,28 +375,30 @@
             </div>
 
             <p style="font-size: 0.9rem;">
-                Para despedirnos hemos organizado un pequeño Café de 11:00 a 12:00 hrs, en el Claustro del Hotel Palacio de los Velada. 
-                A continuación hemos organizado un pequeño tour privato por Ávila, para aquellos que quieras quedarse un poco más. Recomendamos pasar por la Catedral de Ávila, para aquellos que tengan que irse antes.       </p>
-              <div class="highlight-box">
-                            <strong>📍 Lugar:</strong>
-                            Hotel Palacio de los Velada - en el Claustro<br>
-                            <a href="https://maps.app.goo.gl/eCm9dnsGyAvVMsyS6" target="_blank" style="color:#0891b2; text-decoration:none; font-weight:600;">
-                                Ver en Google Maps
-                            </a>
-                        </div>
+                Para despedirnos hemos organizado un pequeño café de 11:00 a 12:00 hrs, en el Claustro del Hotel Palacio de los Velada.
+                A continuación hemos organizado un pequeño tour privado por Ávila, para aquellos que quieran quedarse un poco más.
+                Recomendamos pasar por la Catedral de Ávila para aquellos que tengan que irse antes.
+            </p>
+
+            <div class="highlight-box">
+                <strong>📍 Lugar:</strong>
+                Hotel Palacio de los Velada - en el Claustro<br>
+                <a href="https://maps.app.goo.gl/eCm9dnsGyAvVMsyS6" target="_blank" rel="noopener noreferrer">
+                    Ver en Google Maps
+                </a>
+            </div>
         </div>
 
-        <!-- Información importante (mismo tamaño que viernes/domingo) -->
+        <!-- INFORMACIÓN IMPORTANTE -->
         <div class="info-final">
             <h3>Información Importante</h3>
             <p style="margin-top: 0.4rem;">
                 <strong>Confirmaciones:</strong> Por favor, confirmad vuestra asistencia antes del 15 de abril a través del formulario en la web principal.<br><br>
                 <strong>¿Dudas?</strong> No dudéis en contactarnos para cualquier pregunta:
             </p>
+
             <p style="font-size: 0.95rem; margin-top: 1rem;">
-                <a href="mailto:masiaybella@gmail.com">
-                    ✉️ masiaybella@gmail.com
-                </a>
+                <a href="mailto:masiaybella@gmail.com">✉️ masiaybella@gmail.com</a>
             </p>
         </div>
     </div>
