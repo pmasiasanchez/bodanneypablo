@@ -25,28 +25,6 @@
             font-size: 0.9rem;
         }
 
-        /* Selector de idioma */
-        .language-switch {
-            position: fixed;
-            top: 1rem;
-            right: 1rem;
-            background: rgba(255,255,255,0.9);
-            padding: 0.4rem 0.8rem;
-            border-radius: 999px;
-            font-size: 0.8rem;
-            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-            z-index: 1000;
-        }
-        .language-switch a {
-            color: #C86340;
-            text-decoration: none;
-            margin: 0 0.2rem;
-            font-weight: 500;
-        }
-        .language-switch span {
-            font-weight: 600;
-        }
-
         .hero {
             min-height: 40vh;
             background-image:
@@ -164,6 +142,8 @@
 
         .timeline-item:last-child {
             border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
         }
 
         .timeline-time {
@@ -197,6 +177,16 @@
             color: #0891b2;
         }
 
+        .highlight-box a {
+            color: #0891b2;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .highlight-box a:hover {
+            text-decoration: underline;
+        }
+
         .info-final {
             text-align: left;
         }
@@ -217,6 +207,10 @@
             font-weight: 600;
         }
 
+        .info-final a:hover {
+            text-decoration: underline;
+        }
+
         footer {
             background: #2c3e50;
             color: white;
@@ -231,33 +225,50 @@
                 min-height: auto;
                 padding: 2rem 1rem;
             }
+
             .hero h1 {
                 font-size: 2rem;
             }
+
+            nav {
+                padding: 1rem;
+            }
+
+            nav a {
+                display: inline-block;
+                margin: 0.3rem 0.5rem;
+            }
+
+            .container {
+                padding: 1.5rem 1rem;
+            }
+
             .timeline {
                 padding-left: 1.6rem;
             }
+
             .timeline::before {
                 left: 0.25rem;
+            }
+
+            .timeline-time {
+                margin-left: 1.2rem;
+                font-size: 1.1rem;
             }
         }
     </style>
 </head>
 <body>
-    <div class="language-switch">
-        <a href="programa.html">ES</a> | <span>DE</span>
-    </div>
-
     <div class="hero">
         <div>
-            <h1>Zeremonie &amp; Feier</h1>
-            <p>Ein ganzes Wochenende, um gemeinsam in Ávila zu feiern</p>
+            <h1>Zeremonie & Feier</h1>
+            <p>Ein gemeinsames Wochenende in Ávila</p>
         </div>
     </div>
 
     <nav>
-        <a href="index-de.html">← Zurück zur Hauptseite</a>
-        <a href="hoteles-de.html">Empfohlene Hotels</a>
+        <a href="index.html">← Zurück zur Hauptseite</a>
+        <a href="hoteles.html">Empfohlene Hotels</a>
     </nav>
 
     <div class="container">
@@ -269,29 +280,40 @@
             </div>
 
             <p style="font-size: 0.9rem;">
-                Wir starten das Wochenende mit einer Tapas- und Weinrunde durch Ávila.  
-                Uhrzeit und genaues Programm geben wir euch noch rechtzeitig bekannt – es wird am Freitagabend stattfinden.
+                Wir beginnen das Wochenende am Freitag mit Wein und typischen Tapas aus Ávila.
+                Die genauen Details und Uhrzeiten werden noch bestätigt, voraussichtlich findet das Treffen aber am Freitagabend gegen 20:00 Uhr statt.
+                Dresscode: casual.
             </p>
+
+            <div class="highlight-box">
+                <strong>📍 Ort:</strong>
+                Hotel Restaurante Las Cancelas<br>
+                <a href="https://maps.app.goo.gl/rP1fkQXrhFpSceKAA" target="_blank" rel="noopener noreferrer">
+                    In Google Maps ansehen
+                </a>
+            </div>
         </div>
 
         <!-- SAMSTAG -->
         <div class="day-section sabado">
             <div class="day-header">
                 <h2>Samstag, 30. Mai</h2>
-                <div class="date">Unser großer Tag</div>
+                <div class="date">Wir heiraten!</div>
+                <div class="date">12:30 – 23:00 Uhr</div>
             </div>
 
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-time">12:30 Uhr</div>
-                    <div class="timeline-title">💍 Trauung</div>
+                    <div class="timeline-title">💍 Zeremonie</div>
                     <div class="timeline-description">
-                        Zeremonie im Palacio de los Sofraga – einem historischen Ort, der direkt in die mittelalterliche Stadtmauer von Ávila integriert ist.
+                        Eine intime Zeremonie im Palacio de los Verdugo, einem historischen mittelalterlichen Ort in Ávila.
+
                         <div class="highlight-box">
                             <strong>📍 Ort:</strong>
-                            Palacio de los Sofraga – Stadtmauer von Ávila<br>
-                            <a href="https://maps.app.goo.gl/AXLBcv9AG2eUZkkW7" target="_blank" style="color:#0891b2; text-decoration:none; font-weight:600;">
-                                Auf Google Maps ansehen
+                            Palacio de los Verdugo<br>
+                            <a href="https://maps.app.goo.gl/sebkQFGqSuhZooaR8" target="_blank" rel="noopener noreferrer">
+                                In Google Maps ansehen
                             </a>
                         </div>
                     </div>
@@ -301,27 +323,31 @@
                     <div class="timeline-time">13:30 Uhr</div>
                     <div class="timeline-title">🥂 Empfang</div>
                     <div class="timeline-description">
-                        Aperitif, Anstoßen und Fotos in den Gärten.
+                        Anstoßen, Häppchen und Fotos in den Gärten des Palastes.
+                    </div>
+
+                    <div class="highlight-box">
+                        <strong>📍 Ort:</strong>
+                        Palacio de los Sofraga – Stadtmauer von Ávila<br>
+                        <a href="https://maps.app.goo.gl/AXLBcv9AG2eUZkkW7" target="_blank" rel="noopener noreferrer">
+                            In Google Maps ansehen
+                        </a>
                     </div>
                 </div>
 
                 <div class="timeline-item">
                     <div class="timeline-time">15:00 Uhr</div>
-                    <div class="timeline-title">🍽️ Hochzeitsessen</div>
+                    <div class="timeline-title">🍽️ Mittagessen</div>
                     <div class="timeline-description">
-                        Festliches Menü im Palacio de los Sofraga mit Spezialitäten aus der Region.
+                        Hochzeitsessen im Palacio de los Sofraga mit regionaler Gastronomie.
                     </div>
                 </div>
 
                 <div class="timeline-item">
                     <div class="timeline-time">18:00 Uhr</div>
-                    <div class="timeline-title">🎉 Party &amp; Tanz</div>
+                    <div class="timeline-title">🎉 Feier & Tanz</div>
                     <div class="timeline-description">
-                        Musik, Tanz und ganz viel Lust zu feiern.
-                        <div class="highlight-box">
-                            <strong>🍸 Offene Bar während der gesamten Feier</strong><br>
-                            Damit die Party keine Grenzen kennt.
-                        </div>
+                        Musik, Tanz und ganz viel Freude am Feiern.
                     </div>
                 </div>
 
@@ -329,7 +355,7 @@
                     <div class="timeline-time">21:00 Uhr</div>
                     <div class="timeline-title">🎸 „Langostino Smith“ live</div>
                     <div class="timeline-description">
-                        Live‑Konzert, um die Stimmung noch weiter anzuheizen.
+                        Live-Konzert, um die Feier weiterzuführen.
                     </div>
                 </div>
 
@@ -337,7 +363,7 @@
                     <div class="timeline-time">23:00 Uhr</div>
                     <div class="timeline-title">🌙 Ende der Feier</div>
                     <div class="timeline-description">
-                        Wir schließen die Tanzfläche und verabschieden uns bis zum nächsten Tag.
+                        Wir verabschieden uns von der Tanzfläche und sagen bis zum nächsten Tag auf Wiedersehen.
                     </div>
                 </div>
             </div>
@@ -347,33 +373,39 @@
         <div class="day-section">
             <div class="day-header">
                 <h2>Sonntag, 31. Mai</h2>
-                <div class="date">Gemütlicher Ausklang</div>
+                <div class="date">Abschied am Morgen</div>
+                <div class="date">11:00 – 12:00 Uhr</div>
             </div>
 
             <p style="font-size: 0.9rem;">
-                Wahrscheinlich organisieren wir noch einen privaten Stadtrundgang durch Ávila, ein gemeinsames Frühstück oder ein kleines Padel‑Turnier.  
-                Uhrzeit und Details geben wir euch später bekannt – ihr könnt uns gern Ideen im Kommentarfeld des Formulars dalassen.
+                Zum Abschied haben wir von 11:00 bis 12:00 Uhr einen kleinen Kaffee im Kreuzgang des Hotels Palacio de los Velada organisiert.
             </p>
+
+            <div class="highlight-box">
+                <strong>📍 Ort:</strong>
+                Hotel Palacio de los Velada – im Kreuzgang<br>
+                <a href="https://maps.app.goo.gl/eCm9dnsGyAvVMsyS6" target="_blank" rel="noopener noreferrer">
+                    In Google Maps ansehen
+                </a>
+            </div>
         </div>
 
-        <!-- WICHTIGE INFOS -->
+        <!-- WICHTIGE INFORMATIONEN -->
         <div class="info-final">
             <h3>Wichtige Informationen</h3>
             <p style="margin-top: 0.4rem;">
-                <strong>Zusagen:</strong> Bitte gebt uns bis zum 1. April Bescheid, ob ihr kommen könnt – über das Formular auf der Hauptseite.<br><br>
-                <strong>Fragen?</strong> Meldet euch jederzeit, wenn ihr Fragen zum Ablauf habt.
+                <strong>Rückmeldung:</strong> Bitte bestätigt eure Teilnahme bis zum 15. April über das Formular auf der Hauptseite.<br><br>
+                <strong>Fragen?</strong> Meldet euch jederzeit gerne bei uns:
             </p>
+
             <p style="font-size: 0.95rem; margin-top: 1rem;">
-                <a href="mailto:masiaybella@gmail.com">
-                    ✉️ masiaybella@gmail.com
-                </a>
+                <a href="mailto:masiaybella@gmail.com">✉️ masiaybella@gmail.com</a>
             </p>
         </div>
     </div>
 
     <footer>
-        <p>&copy; 2025 Anne &amp; Pablo – Wir sehen uns in Ávila!</p>
+        <p>© 2025 Anne & Pablo – Wir sehen uns in Ávila!</p>
     </footer>
 </body>
 </html>
-
